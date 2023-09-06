@@ -461,3 +461,48 @@ gradeCalculator(82);
 gradeCalculator(76);
 gradeCalculator(65);
 gradeCalculator(45);
+
+//19. Leap Year Checker
+function leapYearChecker(year) {
+  if (year % 4 === 0 && year % 100 != 0) console.log("Its a leap year");
+  else if (year % 100 === 0 && year % 400 === 0) console.log("Its a leap year");
+  else console.log("Its not a leap year");
+}
+leapYearChecker(2020);
+leapYearChecker(1900);
+leapYearChecker(2000);
+leapYearChecker(2023);
+leapYearChecker(1600);
+
+//20. Movie Ticket Price
+function movieTicketPrice(age) {
+  if (age >= 0 && age <= 12) console.log("$5");
+  else if (age >= 13 && age <= 19) console.log("$8");
+  else if (age >= 20) console.log("$10");
+}
+movieTicketPrice(10);
+movieTicketPrice(16);
+movieTicketPrice(25);
+movieTicketPrice(13);
+
+//21. Days in a Month
+function daysInMonth(month) {
+  if (
+    month === 1 ||
+    month === 1 ||
+    month === 3 ||
+    month === 5 ||
+    month === 7 ||
+    month === 8 ||
+    month === 10 ||
+    month === 12
+  ) {
+    console.log("31");
+  } else if (month === 2) console.log("28");
+  else console.log("30");
+}
+
+daysInMonth(1);
+daysInMonth(2);
+daysInMonth(4);
+daysInMonth(7);
