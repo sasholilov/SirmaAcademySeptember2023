@@ -506,3 +506,172 @@ daysInMonth(1);
 daysInMonth(2);
 daysInMonth(4);
 daysInMonth(7);
+
+//22. University Admissions
+function universityAdmissions(score, extracurriculars) {
+  if (score >= 90) console.log("Admitted");
+  else if (score >= 80 && score < 90) {
+    if (extracurriculars >= 2) {
+      console.log("Admitted");
+    } else console.log("Not admitted");
+  } else console.log("Not admitted");
+}
+universityAdmissions(85, 3);
+universityAdmissions(88, 1);
+universityAdmissions(91, 0);
+
+//23. Discount Calculator
+function discountCalculator(age, membership) {
+  if (age < 18) console.log("10& discount");
+  else if (age >= 18 && age <= 64) {
+    if (membership === "Yes") console.log("20% discount");
+    else console.log("10% discount");
+  } else if (age > 64) console.log("30% discount");
+}
+
+discountCalculator(20, "Yes");
+discountCalculator(15, "No");
+discountCalculator(70, "No");
+
+//24. Movie Classification
+function movieClassification(age) {
+  if (age < 14) console.log("U-rated movies");
+  else if (age > 12 && age < 18) console.log("U and PG-13 rated movies");
+  else console.log("All movies");
+}
+
+movieClassification(10);
+movieClassification(16);
+movieClassification(21);
+
+//25. Airline Luggage Charges
+function airlineLuggage(weight, dimensions) {
+  if (weight > 50) {
+    if (dimensions > 158) {
+      let overSize = dimensions - 158;
+      if (overSize > 0 && overSize < 21) {
+        console.log("$150 (Overweight + Sightly oversize)");
+      } else if (overSize > 20 && overSize < 51) {
+        console.log("$200 (Overweight + Oversize");
+      } else if (overSize > 49) {
+        console.log("$250 (Overweight + Oversize + Handling)");
+      }
+    }
+  } else {
+    if (dimensions > 158) {
+      let overSize = dimensions - 158;
+      if (overSize > 0 && overSize < 21) {
+        console.log("$50 (Sightly oversize)");
+      } else if (overSize > 20 && overSize < 51) {
+        console.log("$100 (Oversize)");
+      } else if (overSize > 49) {
+        console.log("$200 (Oversize)");
+      }
+    }
+  }
+}
+
+airlineLuggage(51, 160);
+airlineLuggage(48, 180);
+airlineLuggage(55, 290);
+
+//26. Adventure Game: Path Decision
+function adventureGame(right, left) {
+  if (right === "sword" || left === "sword") {
+    if (right === "shield" || left === "shield") {
+      console.log("Path to the castle");
+    } else console.log("The the path to the forest");
+  } else if (right === "map" || left === "map") {
+    if (right === "coins" || left === "coins") {
+      console.log("Go to the town");
+    } else console.log("Camp at the current spot and prepare for the next day");
+  } else console.log("Wander aimlessly");
+}
+
+adventureGame("sword", "shield");
+adventureGame("map", "coins");
+adventureGame("torch", "flower");
+
+//27. Potion Brewing Decision
+function potionBrewing(ingr1, ingr2) {
+  if (ingr1 === "herbs" || ingr2 === "herbs") {
+    if (ingr1 === "water" || ingr2 === "water") console.log("Health potion");
+    else if (ingr1 === "oil" || ingr2 === "oil") console.log("Stealth potion");
+    else console.log("Minor stamina potion.");
+  } else if (ingr1 === "berries" || ingr2 === "berries") {
+    if (ingr1 === "sugar" || ingr2 === "sugar") console.log("Speed potion");
+    else console.log("Minor energy potion");
+  } else console.log("Cant brew any potion");
+}
+
+potionBrewing("herbs", "water");
+potionBrewing("herbs", "oil");
+potionBrewing("herbs", "banana");
+potionBrewing("berries", "sugar");
+potionBrewing("berries", "banana");
+potionBrewing("herbs", "sugar");
+
+//28. Survival in the Wilderness
+function survival(time, env, item) {
+  if (time === "day") {
+    if (env === "forest") {
+      if (item === "knife") console.log("Hunt for food.");
+      else if (item === "container") console.log("Collect berries.");
+      else console.log("Explore.");
+    } else if (env === "desert") {
+      if (item === "hat") console.log("Search for water");
+      else console.log("Find shade.");
+    }
+  } else if (time === "night") {
+    if (env === "forest") {
+      if (item === "firestarter") console.log("Make a campfire.");
+      else console.log("Climb a tree for safety.");
+    } else if (env === "desert") {
+      if (item === "blanket") console.log("Sleep");
+      else console.log("Keep moving to stay warm.");
+    }
+  }
+}
+
+survival("day", "forest", "knife");
+survival("day", "forest", "container");
+survival("night", "forest", "firestarter");
+survival("night", "desert", "blanket");
+survival("day", "desert", "hat");
+survival("night", "desert", "sword");
+
+//29. Climate Zone Identifier
+function climateZone(latitude, zone) {
+  if (zone === "N" || zone === "S") {
+    if (Math.abs(latitude) >= 66.5) console.log("Arctic Zone");
+    else if (Math.abs(latitude) >= 23.5 && Math.abs(latitude) <= 66.5)
+      console.log("Temperature Zone");
+    else if (Math.abs(latitude) > 0 && Math.abs(latitude) <= 23.5)
+      console.log("Tropic Zone");
+    else if (Math.abs(latitude) === 0) console.log("Equator");
+  }
+}
+climateZone(70, "N");
+climateZone(45, "S");
+climateZone(10, "N");
+climateZone(0, "N");
+climateZone(-85, "S");
+
+//30. Architectural Era Identifier
+function architecturalEra(year, material) {
+  if (year < 500 && material === "stone") console.log("Ancient");
+  else if (year > 499 && year < 1501 && material === "stone")
+    console.log("Medieval");
+  else if (year > 1499 && year < 1801 && material === "wood")
+    console.log("Colonial");
+  else if (year > 1799 && year < 1901 && material === "steel")
+    console.log("Industrial");
+  else if (year > 1899 && material === "steel") console.log("Modern");
+  else console.log("Uncertain");
+}
+
+architecturalEra(300, "stone");
+architecturalEra(1500, "wood");
+architecturalEra(1500, "stone");
+architecturalEra(2000, "steel");
+architecturalEra(1100, "wood");
