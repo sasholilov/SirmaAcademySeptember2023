@@ -341,7 +341,6 @@ function encoding(n) {
       Number(stringN[stringN.length - i]) + 33
     ).repeat(stringN[stringN.length - i]);
     template += formatedSymbols ? formatedSymbols : "ZERO";
-
     template += "\n";
   }
 
@@ -350,3 +349,138 @@ function encoding(n) {
 
 encoding(2049);
 encoding(9347439);
+
+//25. Coins and Notes
+console.log("---------Coins and Notes------------");
+function coinsAndNotes(coinsOne, coinsTwo, banknotesFive, sum) {
+  let oneLev = 1;
+  let twoLev = 2;
+  let fiveLev = 5;
+  for (let i = 1; i <= banknotesFive; i++) {
+    if (sum - fiveLev * i === 0) {
+      console.log(`${i} * 5 lv. = 10lv`);
+    }
+  }
+}
+coinsAndNotes(3, 2, 3, 10);
+
+//26. Even Pairs
+console.log("---------Even Pairs---------");
+function evenPairs(p1, p2, end1, end2) {
+  for (let i = p1; i <= p1 + end1; i++) {
+    for (let j = p2; j <= p2 + end2; j++) {
+      if (checkPrime(i) && checkPrime(j)) {
+        console.log(`${i}${j}`);
+      }
+    }
+  }
+  function checkPrime(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+evenPairs(10, 20, 5, 5);
+
+//27. Change
+console.log("----------Change---------");
+function change(n) {
+  let coin1st = 0.01;
+  let coin2st = 0.02;
+  let coin5st = 0.05;
+  let coin10st = 0.1;
+  let coin20st = 0.2;
+  let coin50st = 0.5;
+  let coin1lv = 1;
+  let coin2lv = 2;
+  let count = 0;
+  let amount = n;
+
+  for (let i = 1; i <= 8; i++) {
+    if (amount >= coin2lv) {
+      amount = amount - coin2lv;
+      count++;
+    } else if (amount >= coin1lv) {
+      amount = (amount - coin1lv).toFixed(2);
+      count++;
+    } else if (amount >= coin50st) {
+      amount = (amount - coin50st).toFixed(2);
+      count++;
+    } else if (amount >= coin20st) {
+      amount = (amount - coin20st).toFixed(2);
+      count++;
+    } else if (amount >= coin10st) {
+      amount = (amount - coin10st).toFixed(2);
+      count++;
+    } else if (amount >= coin5st) {
+      amount = (amount - coin5st).toFixed(2);
+      count++;
+    } else if (amount >= coin2st) {
+      amount = (amount - coin2st).toFixed(2);
+      count++;
+    } else if (amount >= coin1st) {
+      amount = (amount - coin1st).toFixed(2);
+      count++;
+    } else if (amount == 0) {
+      console.log(count);
+      break;
+    }
+  }
+}
+change(1.23);
+change(2);
+change(0.56);
+change(2.73);
+
+//28. Pyramid of numbers
+console.log("------Pyramid of numbers-------");
+function pyramidOfNumbers(n) {
+  let count = 1;
+  let string = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n - i; j++) {
+      string += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      string += count;
+      count++;
+    }
+    string += "\n";
+  }
+  console.log(string);
+}
+pyramidOfNumbers(7);
+
+//29. Unique codes
+
+//30. Square of Asterisks
+console.log("-------Square of Asterisks--------");
+function squareOfAsteriks(n) {
+  console.log("* ".repeat(n));
+  for (let i = 2; i <= n; i++) {
+    console.log("* ".repeat(n));
+  }
+}
+squareOfAsteriks(2);
+console.log("--");
+squareOfAsteriks(3);
+
+//33. Tree Pattern
+console.log("----------Tree Pattern------");
+function treePattern(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = i; j <= i; j++) {
+      console.log(
+        " ".repeat(n - i) + "*".repeat(i * 2 - 1) + " ".repeat(n - i)
+      );
+    }
+  }
+  console.log(" ".repeat(n - 1) + "*" + " ".repeat(n - 1));
+}
+treePattern(4);
+treePattern(6);
+treePattern(3);
