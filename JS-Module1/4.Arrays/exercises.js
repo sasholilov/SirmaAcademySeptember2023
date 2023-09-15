@@ -117,3 +117,20 @@ function equalArrays(arr1, arr2) {
 equalArrays(["10", "20", "30"], ["10", "20", "30"]);
 equalArrays(["1", "2", "3", "4", "5"], ["1", "2", "4", "4", "5"]);
 equalArrays(["1"], ["10"]);
+
+//8.Condense Array to Number
+console.log("---------Condense Array to Number---------");
+function condense(arr) {
+  while (arr.length > 1) {
+    const condensed = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+      condensed.push(arr[i] + arr[i + 1]);
+    }
+    arr = condensed;
+  }
+  console.log(arr[0]);
+}
+
+condense([5, 0, 4, 1, 2]);
+
+//9. Print every N-th Element from an Array
