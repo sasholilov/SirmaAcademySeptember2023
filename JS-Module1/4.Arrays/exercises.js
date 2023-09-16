@@ -276,3 +276,83 @@ function processOddNumber(arr) {
 processOddNumber([10, 15, 20, 25]);
 
 //17. Smallest Two Numbers
+console.log("--------Smallest Two Numbers--------");
+function smallestTwoNumbers(arr) {
+  const newArr = [];
+  let min1 = arr[1];
+  for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] < min1) {
+      min1 = arr[i];
+    }
+  }
+  const min1Index = arr.indexOf(min1);
+  arr.splice(min1Index, 1);
+  let min2 = arr[1];
+  for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] < min2) {
+      min2 = arr[i];
+    }
+  }
+  newArr.push(min1, min2);
+  console.log(newArr.join(" "));
+}
+
+smallestTwoNumbers([30, 15, 50, 5]);
+smallestTwoNumbers([3, 0, 10, 4, 7, 3]);
+
+//18. List of Products
+console.log("--------List of Products----------");
+function listOfProducts(arr) {
+  const newArr = [];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    newArr.push(`${i + 1}.${arr[i]}`);
+  }
+  newArr.sort();
+  console.log(newArr.join("\n"));
+}
+
+listOfProducts(["Potatoes", "Tomatoes", "Onions", "Apples"]);
+
+//19. Array Manipulations
+function arrayMan(arr) {
+  console.log("-------------Array Manipulations------------");
+  let arrFrom = arr[0].split(/\s+/);
+  let addCmd = arr[1].split(" ")[1];
+  let removeCmd = arr[2].split(" ")[1];
+  let removeAtCmd = arr[3].split(" ")[1];
+  let insertNumberCmd = arr[4].split(" ")[1];
+  let insertindexCmd = arr[4].split(" ")[2];
+  arrFrom.push(addCmd);
+  arrFrom.splice(arrFrom.indexOf(removeCmd), 1);
+  arrFrom.splice(removeAtCmd, 1);
+  arrFrom.splice(insertindexCmd, 0, insertNumberCmd);
+  console.log(arrFrom);
+}
+
+arrayMan(["4 19 2 53 6 43", "Add 3", "Remove 2", "RemoveAt 1", "Insert 8 3"]);
+
+//20. Longest sequence of identical elements
+console.log("-----------Longest sequence of identical elements----------");
+function logestSequence(string) {
+  const arr = string.split(/\s+/);
+  let currentElement = arr[0];
+  let currentCount = 1;
+  let maxElement = arr[0];
+  let maxCount = 1;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === currentElement) {
+      currentCount++;
+    } else {
+      currentElement = arr[i];
+      currentCount = 1;
+    }
+
+    if (currentCount >= maxCount) {
+      maxElement = currentElement;
+      maxCount = currentCount;
+    }
+  }
+  console.log(maxElement.repeat(maxCount));
+}
+logestSequence("2 2 2 3 4 4 2 2 2 1");
+logestSequence("1 1 1 2 3 1 3 3 1 1 ");
