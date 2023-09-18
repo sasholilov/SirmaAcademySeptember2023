@@ -29,10 +29,10 @@ function charactersRange(a, b) {
   for (let i = start + 1; i < end; i++) {
     console.log(String.fromCharCode(i));
   }
-}
 
-charactersRange("a", "d");
-charactersRange("#", ":");
+  charactersRange("a", "d");
+  charactersRange("#", ":");
+}
 
 //4. Odd and Even Sum
 console.log("---------Odd and Even Sum---------");
@@ -75,3 +75,82 @@ function palindromeNumbers(arr) {
 
 palindromeNumbers([123, 323, 421, 121]);
 palindromeNumbers([32, 2, 232, 1010]);
+
+//6. Password Validator
+function passwordValidator(pass) {
+  if (
+    checkCharacters(pass) &&
+    checkLettersAndDigits(pass) &&
+    checkDigit(pass)
+  ) {
+    console.log("Password is valid");
+  }
+
+  function checkCharacters(password) {
+    if (password.length > 5 && password.length < 11) {
+      return true;
+    } else return console.log("Password must be between 6 and 10 characters");
+  }
+
+  function checkLettersAndDigits(password) {
+    const pattern = /[a-zA-Z]/.test(password) && /\d/.test(password);
+    if (pattern) {
+      return true;
+    } else {
+      return console.log("Password must consist only of letters and digits.");
+    }
+  }
+
+  function checkDigit(password) {
+    if (password.length >= 2) {
+      return true;
+    } else {
+      return console.log("Password must have at least 2 digits");
+    }
+  }
+}
+passwordValidator("pass");
+passwordValidator("APass123");
+passwordValidator("Pa$s$s");
+
+//7. Shortest and Longest Word
+function shorterstAndLongestWord(string) {
+  let newString = string.split(/[^a-zA-Z0-9]+/);
+  let min = newString[0].length;
+  let max = newString[0].length;
+  let shortestWord = newString[0];
+  let longestWord = newString[0];
+  for (let i = 1; i < newString.length; i++) {
+    if (newString[i].length > max) {
+      max = newString[i].length;
+      longestWord = newString[i];
+    } else if (newString[i].length < min) {
+      min = newString[i].length;
+      shortestWord = newString[i];
+    }
+  }
+  console.log(shortestWord);
+  console.log(longestWord);
+}
+shorterstAndLongestWord("Hello how are you today? I hope you are fine");
+shorterstAndLongestWord(
+  "Lorem Ipsum is dummy text of the typesetting industry"
+);
+
+//9. Progress Bar
+function prgressBar(n) {
+  let count = n / 10;
+  let dots = 10 - count;
+  let percentTemplete = "%".repeat(count);
+  let dotsTemplete = ".".repeat(dots);
+  if (n < 100) {
+    console.log(`[${percentTemplete}${dotsTemplete}]`);
+    console.log("Loading...");
+  } else {
+    console.log(`[${percentTemplete}${dotsTemplete}]`);
+    console.log("Complete!");
+  }
+}
+prgressBar(30);
+prgressBar(50);
+prgressBar(100);
