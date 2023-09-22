@@ -202,3 +202,191 @@ schoolBook([
   "Student name: Peter, Grade: 11, Graduated with an average score: 4.88",
   "Student name: Gavin, Grade: 10, Graduated with an average score: 4.00",
 ]);
+
+//7. Rectangle
+console.log("----Rectangle-----");
+
+class Rectangle {
+  constructor(width, height, color) {
+    (this.width = width), (this.height = height), (this.color = color);
+  }
+
+  calcArea() {
+    return this.height * this.width;
+  }
+}
+let rect = new Rectangle(4, 5, "Red");
+console.log(rect.width);
+console.log(rect.height);
+console.log(rect.color);
+console.log(rect.calcArea());
+
+//8.Data Class
+console.log("-------Data Class-------");
+
+class Request {
+  response = undefined;
+  fulfilled = false;
+  constructor(method, uri, version, message) {
+    (this.method = method),
+      (this.uri = uri),
+      (this.version = version),
+      (this.message = message);
+  }
+}
+let myData = new Request("GET", "http://google.com", "HTTP/1.1", "");
+console.log(myData);
+
+//9. Tickets
+console.log("------------Tickets-----------");
+function tickets(tickets, sorting) {
+  const ticketsArr = [];
+  for (let data of tickets) {
+    let dest = data.split("|")[0];
+    let price = data.split("|")[1];
+    let status = data.split("|")[2];
+
+    class Ticket {
+      constructor(destination, price, status) {
+        (this.destination = destination),
+          (this.price = price),
+          (this.status = status);
+      }
+    }
+    const ticketObj = new Ticket(dest, price, status);
+
+    ticketsArr.push(ticketObj);
+  }
+  console.log(ticketsArr.sort((a, b) => (b[sorting] < a[sorting] ? 1 : -1)));
+}
+tickets(
+  [
+    "Philadelphia|94.20|available",
+    "New York City|95.99|available",
+    "New York City|95.99|sold",
+    "Boston|126.20|departed",
+  ],
+  "status"
+);
+
+//10. Sorted list
+console.log("--------Sorted List---------");
+class List {
+  listOfelements = [].sort((a, b) => a - b);
+  add(el) {
+    this.listOfelements.push(el);
+  }
+  remove(index) {
+    this.listOfelements.splice(index, 1);
+  }
+  get(index) {
+    return this.listOfelements[index];
+  }
+  size() {
+    return this.listOfelements.length;
+  }
+}
+let list = new List();
+list.add(5);
+list.add(6);
+list.add(1);
+list.add(8);
+console.log(list.get(1));
+list.remove(1);
+console.log(list.get(1));
+
+//11. String Container
+console.log("-------String Container-------");
+class StringContainer {
+  myString = "";
+  myStringLength = 0;
+  constructor(str, len) {
+    (this.str = str), (this.len = len);
+  }
+
+  toString() {
+    this.myString = this.str;
+    this.myStringLength = this.len;
+    if (this.myStringLength >= this.myString.length) {
+      return this.myString;
+    } else {
+      return `${this.myString.substring(0, this.myStringLength)}...`;
+    }
+  }
+  increase(num) {
+    this.len += num;
+  }
+  decrease(num) {
+    this.len -= num;
+  }
+}
+let test = new StringContainer("Test", 5);
+test.decrease(3);
+test.increase(5);
+test.decrease(9);
+console.log(test.toString());
+
+//12. Company
+console.log("---------Company--------");
+class Company {
+  departments = {};
+  addEmployee(name, salary, position, department) {
+    if (!this.departments[department]) {
+      this.departments[department] = {
+        employess: [
+          {
+            name: name,
+            salary: salary,
+            position: position,
+            department: department,
+          },
+        ],
+      };
+    } else {
+      this.departments[department].employess.push({
+        name: name,
+        salary: salary,
+        position: position,
+        department: department,
+      });
+    }
+  }
+
+  bestDepartment() {
+    const bestArr = [];
+    const findMaxArr = [];
+    let maxAvrgSalary = 0;
+    for (let data in this.departments) {
+      let len = this.departments[data].employess.length;
+      let depname = data;
+      let sumSalary = this.departments[data].employess.reduce(
+        (acc, e) => acc + e.salary,
+        0
+      );
+      findMaxArr.push(sumSalary / len);
+      maxAvrgSalary = Math.max(...findMaxArr);
+
+      bestArr.push([sumSalary / len, depname]);
+    }
+    const finalResul = bestArr.filter((e) => e[0] === maxAvrgSalary);
+    const maxAverageSalary = finalResul[0][0];
+    const bestDepartment = finalResul[0][1];
+    console.log(`Best department is: ${bestDepartment}`);
+    console.log(`Average salary is: ${maxAverageSalary}`);
+    for (let emp of this.departments[bestDepartment].employess) {
+      console.log(`${emp.name} ${emp.salary} ${emp.position}`);
+    }
+  }
+}
+
+let cmp = new Company();
+cmp.addEmployee("Stamat", 2000, "engineer", "Construction");
+cmp.addEmployee("Peter", 1500, "electrical engineer", "Construction");
+cmp.addEmployee("Martin", 500, "cleaner", "Construction");
+cmp.addEmployee("Stanley", 2000, "architect", "Construction");
+cmp.addEmployee("Stamat", 1200, "digital marketing manager", "Marketing");
+cmp.addEmployee("Peter", 1000, "graphical designer", "Marketing");
+cmp.addEmployee("George", 1350, "HR", "HumanResources");
+
+console.log("-----------------");
+cmp.bestDepartment();
