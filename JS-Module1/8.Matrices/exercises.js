@@ -110,3 +110,64 @@ sumMatrix([
 
 //5. Maximum Sum of 2X2 Submatrix
 console.log("--------Maximum Sum of 2X2 Submatrix---------");
+function twoxtwo(matrix) {
+  const newMatrix = [];
+
+  const testArr = [];
+  let sum = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    let tempArray = [];
+    for (let j = 0; j < matrix[i].length; j++) {
+      tempArray.push(matrix[i][j]);
+    }
+    let newTempArray = tempArray.filter((e) => e != " ");
+    newMatrix.push(newTempArray);
+  }
+  for (let row = 0; row < newMatrix.length; row++) {
+    console.log(newMatrix[row].sort((a, b) => b - a)[0]);
+    console.log(newMatrix[row].sort((a, b) => b - a)[1]);
+    console.log(
+      "Proverka",
+      Number(newMatrix[row].sort((a, b) => b - a)[0]) +
+        Number(newMatrix[row].sort((a, b) => b - a)[1])
+    );
+    testArr.push([
+      newMatrix[row].sort((a, b) => b - a)[0],
+      newMatrix[row].sort((a, b) => b - a)[1],
+    ]);
+
+    for (let row = 0; row < testArr.length; row++) {
+      console.log(Number(testArr[row][0]) + Number(testArr[row][1]));
+    }
+  }
+}
+
+twoxtwo(["7 1 3 3 2 1", "1 3 9 8 5 6", "4 6 7 9 1 0"]);
+
+//6. Print Diagonals of Square Matrix
+
+let input1 = [
+  [56, 2, 8],
+  [1, 65, 3],
+  [1, 2, 4],
+];
+
+console.log("---------Print Diagonals of Square Matrix---------");
+function printDiagonal(matrix) {
+  let arr1 = [];
+  let arr2 = [];
+  for (let row = 0; row < matrix.length; row++) {
+    for (let column = matrix[row].length - 1; column >= 0; column--) {
+      if (column === row) {
+        arr1.push(matrix[row][column]);
+      }
+      if (row + column === matrix[row].length - 1) {
+        arr2.push(matrix[column][row]);
+      }
+    }
+  }
+  console.log(arr1.join(" "));
+  console.log(arr2.join(" "));
+}
+
+printDiagonal(input1);
