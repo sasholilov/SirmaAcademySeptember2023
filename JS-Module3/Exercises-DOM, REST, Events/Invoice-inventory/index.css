@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.top-header {
+  background-color: #cdcdcd;
+  padding: 10px 0 10px 0;
+  margin: 0;
+}
+
+.top-header > div {
+  max-width: 1400px;
+  gap: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.header {
+  background-color: #e4e4e4;
+  border-bottom: 1px solid black;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header-icons {
+  display: flex;
+  gap: 3em;
+}
+
+.header-icons > div {
+  position: relative;
+}
+
+.header-icons > div:first-child > span {
+  position: absolute;
+  bottom: -10px;
+  left: -15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+}
+
+.header-icons > div:nth-child(3) > span {
+  position: absolute;
+  bottom: -10px;
+  left: -35px;
+  font-size: 14px;
+}
+
+.header-icons > div:last-child > span {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+}
