@@ -67,5 +67,94 @@ body {
   left: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: rgb(77, 77, 77);
+  color: #4d4d4d;
+}
+
+.menu {
+  background-color: #cdcdcd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 2em;
+}
+
+.menu-wrapper > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.menu-wrapper > div:not(:last-child)::after {
+  content: "|";
+  margin-left: 25px;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.banner {
+  text-align: center;
+  background-color: #515151;
+}
+
+.filter {
+  background-color: #515151;
+}
+
+.filter-wrapper {
+  box-sizing: border-box;
+  max-width: 1400px;
+  display: flex;
+  margin: 0 auto;
+  gap: 2em;
+  padding: 30px;
+  background-color: #8e8e8e;
+  border: 1px solid black;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.filter-wrapper select {
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  padding-right: 250px;
+  font-size: 16px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  background: url("/img/arrow-down.png") no-repeat right center;
+  padding-right: 20px;
+}
+
+.filter-wrapper span {
+  background-color: #0089f3;
+  color: white;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
 }
