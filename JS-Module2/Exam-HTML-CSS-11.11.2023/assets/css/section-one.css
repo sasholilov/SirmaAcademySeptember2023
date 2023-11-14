@@ -1,0 +1,84 @@
+#section-one {
+  background-repeat: no-repeat;
+  padding-left: 131px;
+  background-image: url("/assets/images/backround-burger.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  gap: 192px;
+  padding-top: 65px;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.links ul {
+  display: flex;
+  font-size: 23px;
+  letter-spacing: 0px;
+  line-height: 39px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-align: center;
+  gap: 40px;
+}
+
+.links ul {
+  position: relative;
+}
+
+#section-one ul li {
+  cursor: pointer;
+}
+
+.links ul > li:after {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  content: "";
+  background-color: #b2fcff;
+  height: 3px;
+  width: 50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.links ul > li:hover::after {
+  opacity: 1;
+}
+
+.logo-wrapper img {
+  max-width: 75px;
+}
+
+.section-one-content {
+  padding-bottom: 238px;
+}
+
+.section-one-content p {
+  padding-top: 115px;
+  font-size: 134px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Aleo";
+  max-width: 732px;
+  text-transform: capitalize;
+  line-height: 163px;
+}
+
+.section-one-content button {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  background-color: #1b6ec7;
+  border-radius: 25px;
+  width: 202px;
+  height: 50px;
+  border: none;
+}

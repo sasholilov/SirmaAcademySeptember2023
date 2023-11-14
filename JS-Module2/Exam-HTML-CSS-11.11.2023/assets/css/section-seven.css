@@ -1,0 +1,98 @@
+#section-seven {
+  background-color: #ffeedc;
+  padding-top: 198px;
+  padding-bottom: 284px;
+  text-align: center;
+  position: relative;
+}
+
+#section-seven .fruit-two {
+  position: absolute;
+  top: 148px;
+  left: 96px;
+}
+
+#section-seven .burger-shape {
+  position: absolute;
+  top: 80px;
+  right: 69px;
+}
+
+#section-seven .pizza-shape-one {
+  position: absolute;
+  bottom: 84px;
+  left: 150px;
+}
+
+#section-seven .pizza-shape-two {
+  position: absolute;
+  bottom: 57px;
+  right: 142px;
+}
+
+.section-seven-content h1 {
+  font-size: 53px;
+  color: #4d80e4;
+  font-weight: 700;
+  font-family: "Aleo";
+  text-align: center;
+}
+
+.section-seven-content p {
+  font-size: 25px;
+  color: #1a1a1a;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 782px;
+  margin: 48px auto 108px auto;
+}
+
+.section-seven-content form input[type="text"] {
+  width: 100%;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+
+.section-seven-content form input[type="text"]::placeholder {
+  opacity: 0.502;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-transform: capitalize;
+}
+
+.section-seven-content form input[type="text"]:focus {
+  outline: none;
+}
+
+.section-seven-content form input[type="submit"] {
+  border: none;
+  background-color: #4d80e4;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  border-radius: 35px;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  width: max-content;
+  cursor: pointer;
+}
+
+.subscribe form {
+  position: relative;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}

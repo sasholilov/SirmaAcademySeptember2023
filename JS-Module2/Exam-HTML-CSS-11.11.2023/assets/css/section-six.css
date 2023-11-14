@@ -1,0 +1,37 @@
+#section-six {
+  position: relative;
+}
+
+#section-six img {
+  width: 100%;
+}
+
+.section-six-content {
+  position: relative;
+}
+#section-six::after {
+  content: "";
+  background-color: #ff7d57;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  top: 0;
+}
+.section-six-p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat";
+  max-width: 1030px;
+  text-align: center;
+  z-index: 1;
+}
+
+.section-six-p p {
+  margin-bottom: 60px;
+}

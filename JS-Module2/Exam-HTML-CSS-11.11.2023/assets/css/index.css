@@ -1,0 +1,14 @@
+@import url("/assets/css/css-reset.css");
+@import url("/assets/css/section-one.css");
+@import url("/assets/css/section-two.css");
+@import url("/assets/css/section-three.css");
+@import url("/assets/css/section-four.css");
+@import url("/assets/css/section-five.css");
+@import url("/assets/css/section-six.css");
+@import url("/assets/css/section-seven.css");
+@import url("/assets/css/footer.css");
+@import url("/assets/css/font-awesome.css");
+
+.container {
+  padding: 88px 162px 128px 162px;
+}

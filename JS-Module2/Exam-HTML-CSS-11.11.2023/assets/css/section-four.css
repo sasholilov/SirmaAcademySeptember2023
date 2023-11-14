@@ -1,0 +1,60 @@
+#section-four {
+  background-color: #1b6ec7;
+  padding-bottom: 229px;
+  padding-right: 155px;
+  position: relative;
+}
+
+#section-four .pizza-shape-one {
+  position: absolute;
+  top: -150px;
+  left: 80px;
+}
+
+#section-four h1 {
+  font-size: 70px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Aleo";
+  text-align: center;
+}
+
+.statistics-items {
+  margin-top: 66px;
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-circle {
+  width: 250px;
+  height: 250px;
+  border: 12px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.statistics-items span {
+  font-size: 96px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.statistics-items p {
+  margin-top: 85px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+}

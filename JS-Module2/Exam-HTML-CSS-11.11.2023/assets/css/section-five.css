@@ -1,0 +1,61 @@
+#section-five {
+  background-color: #ffeedc;
+  padding-top: 188px;
+  padding-bottom: 192px;
+
+  box-sizing: border-box;
+}
+
+.section-five-content .burger-shape {
+  position: absolute;
+  top: -150px;
+}
+
+.section-five-content .fruit-two {
+  position: absolute;
+  top: -150px;
+  left: 78%;
+}
+
+.section-five-content .pizza-shape-three {
+  position: absolute;
+  bottom: -150px;
+}
+
+.section-five-content .pizza-shape-four {
+  position: absolute;
+  bottom: -150px;
+  left: 78%;
+}
+
+.section-five-content {
+  position: relative;
+  display: flex;
+  gap: 95px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-five-content p {
+  max-width: 535px;
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 400;
+  font-family: "Montserrat";
+  margin-top: 36px;
+}
+
+.section-five-content h1 {
+  font-size: 53px;
+  color: #1b6ec7;
+  font-weight: 700;
+  font-family: "Aleo";
+  text-align: left;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.section-five-content img {
+  border-radius: 50%;
+}
