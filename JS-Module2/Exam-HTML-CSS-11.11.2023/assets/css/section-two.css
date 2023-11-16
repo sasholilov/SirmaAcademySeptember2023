@@ -8,7 +8,7 @@
   font-weight: 700;
   font-family: "Aleo";
   text-align: center;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
 }
 
 #section-two h3 {
@@ -23,9 +23,10 @@
 }
 
 .menu-items {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   text-align: center;

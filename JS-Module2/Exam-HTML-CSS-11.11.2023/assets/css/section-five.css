@@ -6,9 +6,14 @@
   box-sizing: border-box;
 }
 
-.section-five-content .burger-shape {
+.burger-wrapper {
+  display: relative;
+}
+
+.burger-shape {
   position: absolute;
   top: -150px;
+  left: 0;
 }
 
 .section-five-content .fruit-two {

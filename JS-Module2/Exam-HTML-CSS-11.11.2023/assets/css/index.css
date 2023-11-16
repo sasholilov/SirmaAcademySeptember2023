@@ -10,5 +10,10 @@
 @import url("/assets/css/font-awesome.css");
 
 .container {
-  padding: 88px 162px 128px 162px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 125px;
+  display: flex;
+  flex-wrap: wrap;
 }

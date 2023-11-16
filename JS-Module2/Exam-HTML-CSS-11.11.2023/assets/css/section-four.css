@@ -1,7 +1,8 @@
 #section-four {
+  width: 100%;
   background-color: #1b6ec7;
-  padding-bottom: 229px;
-  padding-right: 155px;
+  padding-bottom: 100px;
+  padding-right: 100px;
   position: relative;
 }
 
@@ -16,11 +17,11 @@
   color: #ffffff;
   font-weight: 700;
   font-family: "Aleo";
-  text-align: center;
+  margin: 0 auto;
 }
 
 .statistics-items {
-  margin-top: 66px;
+  margin: 66px auto 0 auto;
   display: flex;
   gap: 35px;
   flex-wrap: wrap;
@@ -29,8 +30,8 @@
 }
 
 .stat-circle {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border: 12px solid #ffffff;
   border-radius: 50%;
   position: relative;

@@ -1,6 +1,6 @@
 #section-one {
+  width: 100%;
   background-repeat: no-repeat;
-  padding-left: 131px;
   background-image: url("/assets/images/backround-burger.jpg");
   background-position: center;
   background-size: cover;
@@ -8,10 +8,10 @@
 
 .nav {
   display: flex;
-  gap: 192px;
-  padding-top: 65px;
+  gap: 100px;
   align-items: center;
-  margin-left: 25px;
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 
 .links ul {
