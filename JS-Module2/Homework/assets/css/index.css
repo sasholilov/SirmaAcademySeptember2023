@@ -1,0 +1,11 @@
+@import url("/assets/css/css-reset.css");
+@import url("/assets/css/header.css");
+@import url("/assets/css/items.css");
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 44px 10px 50px 10px;
+}

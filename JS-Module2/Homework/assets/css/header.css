@@ -1,0 +1,135 @@
+header {
+  background-image: url("/assets/images/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 100px;
+}
+
+.nav {
+  justify-content: flex-end;
+  gap: 58px;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 17px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+
+.nav li {
+  list-style: none;
+}
+
+form {
+  position: relative;
+}
+
+.btn-search {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  max-width: fit-content;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-search i {
+  color: #343434;
+  text-align: center;
+  font-size: 28px;
+}
+
+.header-content {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content-right {
+  margin-top: 75px;
+  position: relative;
+}
+
+.title-wrapper {
+  margin-top: 55px;
+}
+
+.header-content h1 {
+  font-size: 92px;
+  color: #ffffff;
+  font-family: "Reey";
+  text-transform: capitalize;
+}
+
+.header-content h3 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Open Sans";
+  margin-top: 100px;
+}
+
+.logo {
+  max-width: 136px;
+}
+
+.header-content button {
+  max-width: 217px;
+  font-size: 25px;
+  color: #2e3034;
+  font-weight: 800;
+  font-family: "Open Sans";
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  padding: 8px 32px 8px 32px;
+  margin-top: 66px;
+  cursor: pointer;
+}
+
+.nav form input[type="text"] {
+  border-radius: 25px;
+  background-color: #ffffff;
+  padding: 15px 15px 15px 15px;
+  border: none;
+}
+
+.header-content p {
+  max-width: 500px;
+  font-size: 21px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Open Sans";
+  margin-top: 25px;
+}
+
+.spaghetti-image {
+  max-width: 586px;
+}
+
+.souse-image {
+  position: absolute;
+  max-width: 181px;
+  bottom: -70px;
+  left: -40px;
+}
+
+.leafs-image {
+  position: absolute;
+  max-width: 518px;
+  bottom: -265px;
+  right: -20px;
+}
