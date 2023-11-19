@@ -6,6 +6,7 @@
 @import url("/assets/css/pizza.css");
 @import url("/assets/css/information.css");
 @import url("/assets/css/subscribe.css");
+@import url("/assets/css/footer.css");
 
 .container {
   max-width: 1320px;
@@ -29,4 +30,10 @@
   font-weight: 800;
   font-family: "Open Sans";
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1152px) {
+  .header-content {
+    flex-direction: column;
+  }
 }
