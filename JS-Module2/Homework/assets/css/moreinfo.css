@@ -1,0 +1,44 @@
+#moreinfo {
+  padding: 100px 0 70px 0;
+  background-color: #27292c;
+}
+
+#moreinfo h2 {
+  font-size: 75px;
+  line-height: 52px;
+  color: #ffffff;
+  font-family: "Reey";
+  text-align: center;
+}
+
+#moreinfo p {
+  padding: 20px 0 20px 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 495px;
+}
+
+.text-wrapper {
+  margin: 54px 20px 76px 20px;
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.btn-more-info {
+  background-color: #e8e8e8;
+  font-size: 26px;
+  color: #27292c;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 17px 55px 17px 55px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

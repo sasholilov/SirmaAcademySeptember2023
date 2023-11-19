@@ -30,6 +30,7 @@
   font-weight: 700;
   font-family: "Open Sans";
   margin-left: 40px;
+  margin-bottom: 26px;
 }
 
 .items p {
@@ -40,6 +41,7 @@
   max-width: 303px;
   padding-bottom: 120px;
   margin-left: 40px;
+  line-height: 28px;
 }
 
 .items {
@@ -51,20 +53,4 @@
 .items img {
   text-align: left;
   height: 372px;
-}
-
-.btn-show-more {
-  background-color: #343434;
-  border: none;
-  border-radius: 35px;
-  padding: 25px 60px 25px 60px;
-  cursor: pointer;
-  font-size: 23px;
-  letter-spacing: 5px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 800;
-  font-family: "Open Sans";
-  margin: 0 auto;
 }

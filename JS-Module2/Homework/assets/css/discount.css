@@ -1,0 +1,34 @@
+.discount-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.discount-items h3 {
+  font-size: 58px;
+  color: #27292c;
+  font-weight: 700;
+  font-family: "Open Sans";
+
+  max-width: 542px;
+  margin-bottom: 52px;
+}
+
+.discount-items p {
+  font-size: 29px;
+  color: #27292c;
+  font-weight: 400;
+  font-family: "Open Sans";
+  max-width: 508px;
+  margin-bottom: 52px;
+  line-height: 38px;
+}
+
+.discount-items img {
+  max-width: 636px;
+}
+
+.discount-items:last-child img {
+  max-width: 688px;
+}

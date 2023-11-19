@@ -1,0 +1,45 @@
+#information p {
+  font-size: 19px;
+  line-height: 25px;
+  color: #333d42;
+  font-weight: 400;
+  font-family: "Open Sans";
+  max-width: 332px;
+  padding-bottom: 60px;
+}
+
+#information h4 {
+  font-size: 42px;
+  line-height: 33px;
+  color: #393939;
+  font-family: "Reey";
+  margin-bottom: 46px;
+}
+
+#information h5 {
+  max-width: 774px;
+  font-size: 25px;
+  color: #3f3f3f;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-align: center;
+  flex: 1 1 100%;
+  margin: 164px auto 60px auto;
+}
+
+#information h6 {
+  color: #3f3f3f;
+  font-weight: 700;
+  font-family: "Open Sans";
+  text-align: center;
+  flex: 1 1 100%;
+  margin: 0 auto 135px auto;
+}
+
+.information-container {
+  margin-top: 166px;
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
