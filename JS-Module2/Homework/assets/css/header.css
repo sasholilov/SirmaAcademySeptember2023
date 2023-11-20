@@ -1,9 +1,9 @@
 header {
-  background-image: url("/assets/images/header-background.jpg");
+  background-image: url("../images/header-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-bottom: 100px;
+  padding-bottom: 209px;
 }
 
 .nav {
@@ -49,8 +49,19 @@ form {
 }
 
 .header-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-top: 21px;
+  padding-right: 50px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-content-left {
+  margin-left: 25px;
+  padding-top: 0;
 }
 
 .header-content-right {
@@ -76,7 +87,8 @@ form {
   font-weight: 700;
   font-style: italic;
   font-family: "Open Sans";
-  margin-top: 100px;
+  margin-top: 135px;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -117,19 +129,19 @@ form {
 }
 
 .spaghetti-image {
-  max-width: 586px;
+  max-width: 620px;
 }
 
 .souse-image {
   position: absolute;
-  max-width: 181px;
-  bottom: -70px;
-  left: -40px;
+  max-width: 280px;
+  bottom: -160px;
+  left: -140px;
 }
 
 .leafs-image {
   position: absolute;
-  max-width: 518px;
-  bottom: -265px;
-  right: -10px;
+  max-width: 668px;
+  bottom: -345px;
+  right: -110px;
 }

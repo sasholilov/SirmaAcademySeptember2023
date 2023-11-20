@@ -1,12 +1,12 @@
-@import url("/assets/css/css-reset.css");
-@import url("/assets/css/header.css");
-@import url("/assets/css/items.css");
-@import url("/assets/css/moreinfo.css");
-@import url("/assets/css/discount.css");
-@import url("/assets/css/pizza.css");
-@import url("/assets/css/information.css");
-@import url("/assets/css/subscribe.css");
-@import url("/assets/css/footer.css");
+@import url("./css-reset.css");
+@import url("./header.css");
+@import url("./items.css");
+@import url("./moreinfo.css");
+@import url("./discount.css");
+@import url("./pizza.css");
+@import url("./information.css");
+@import url("./subscribe.css");
+@import url("./footer.css");
 
 .container {
   max-width: 1320px;
