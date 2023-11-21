@@ -1,0 +1,153 @@
+header {
+  background: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 32px;
+  padding-bottom: 58px;
+}
+
+.nav {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 51px;
+  margin-top: 10px;
+  margin-right: 0;
+}
+
+.nav .menu ul li a {
+  text-decoration: none;
+  font-size: 21px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3d2514;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+}
+
+.nav .nav-right {
+  position: relative;
+}
+
+.nav .nav-right p {
+  font-size: 17px;
+  line-height: 71px;
+  color: #3d2514;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: right;
+}
+
+.nav .nav-right p::before {
+  position: absolute;
+  content: url("../images/nav-icon.png");
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 150px;
+}
+
+.header-content {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.header-content .header-content-left {
+  margin-top: 170px;
+}
+
+.header-content .header-content-right {
+  margin-top: -50px;
+}
+
+.header-content .header-content-left p {
+  display: inline;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #3d2514;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+  border: 2px dashed #3d2514;
+  padding: 8px 20px 8px 8px;
+}
+
+.header-content .header-content-left h1 {
+  margin-top: 30px;
+  font-size: 114px;
+  text-transform: uppercase;
+  color: #3d2514;
+  font-weight: 400;
+  font-family: "Alfa Slab One";
+  filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
+}
+
+.header-content .header-content-left h2 {
+  font-size: 56px;
+  text-transform: uppercase;
+  color: #3d2514;
+  font-weight: 400;
+  font-family: "Alfa Slab One";
+  filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
+}
+
+.image-wrapper-burger {
+  position: relative;
+}
+
+.image-wrapper-burger .price-bg {
+  height: 165px;
+  width: 165px;
+  background-color: #bf2222;
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  border-radius: 50%;
+}
+
+.image-wrapper-burger .price {
+  background-color: #bf2222;
+  text-align: center;
+  box-sizing: border-box;
+  width: 147px;
+  border-radius: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: dashed 2px white;
+  margin: 6% auto;
+}
+
+.image-wrapper-burger .price p {
+  font-size: 33px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 10px;
+}
+
+.image-wrapper-burger .price .price-tag {
+  font-size: 70px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Bebas Neue";
+  text-align: center;
+}
+
+.image-wrapper-burger .price .price-dot {
+  font-size: 30px;
+  font-weight: 400;
+}
