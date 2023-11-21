@@ -4,6 +4,7 @@ header {
   background-size: cover;
   background-position: center;
   padding-bottom: 209px;
+  overflow: hidden;
 }
 
 .nav {

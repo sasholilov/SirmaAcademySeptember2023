@@ -1,3 +1,7 @@
+#information {
+  overflow: hidden;
+}
+
 #information p {
   font-size: 19px;
   line-height: 25px;

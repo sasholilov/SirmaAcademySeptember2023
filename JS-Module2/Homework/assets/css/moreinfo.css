@@ -1,6 +1,7 @@
 #moreinfo {
   padding: 100px 0 17px 0;
   background-color: #27292c;
+  overflow: hidden;
 }
 
 #moreinfo h2 {

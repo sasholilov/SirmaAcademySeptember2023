@@ -1,5 +1,6 @@
 #discount {
   padding-bottom: 20px;
+  overflow: hidden;
 }
 
 .discount-items {
