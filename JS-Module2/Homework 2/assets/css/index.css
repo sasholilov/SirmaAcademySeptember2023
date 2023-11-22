@@ -1,6 +1,6 @@
 @import url("./css-reset.css");
 @import url("./header.css");
-
+@import url("./choose.css");
 .container {
   max-width: 1325px;
   margin: 0 auto;
@@ -13,4 +13,8 @@
 h2 {
   font-size: 50px;
   color: #3d2514;
+  text-transform: uppercase;
+  color: #3d2514;
+  font-weight: 400;
+  font-family: "Alfa Slab One";
 }
