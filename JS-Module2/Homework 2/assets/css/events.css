@@ -1,0 +1,49 @@
+#events {
+  padding-bottom: 50px;
+}
+
+#events h2 {
+  margin-top: 6px;
+  font-size: 41.67px;
+}
+
+#events .container {
+  justify-content: space-between;
+  margin-top: 97px;
+  padding-bottom: 29px;
+  padding-top: 59px;
+  filter: drop-shadow(18.656px 24.758px 21.5px rgba(0, 0, 0, 0.17));
+  padding-left: 55px;
+  padding-right: 27px;
+  box-shadow: 14px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.events-text p {
+  max-width: 531px;
+  font-size: 21px;
+  line-height: 33px;
+  color: #3d3d3d;
+  font-weight: 400;
+  font-family: "Montserrat";
+  margin-top: 28px;
+  margin-bottom: 90px;
+}
+
+.events-text h5 {
+  font-size: 29px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+  margin-top: 39px;
+}
+
+.events-text {
+  margin-left: 20px;
+}
+
+.events-image {
+  margin-right: 10px;
+  align-self: flex-start;
+}
