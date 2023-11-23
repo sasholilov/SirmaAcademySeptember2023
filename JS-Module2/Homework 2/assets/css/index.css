@@ -4,6 +4,7 @@
 @import url("./order.css");
 @import url("./events.css");
 @import url("./reservation.css");
+@import url("./footer.css");
 
 .container {
   max-width: 1325px;
