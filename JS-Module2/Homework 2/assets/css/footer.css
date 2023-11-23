@@ -11,3 +11,62 @@ footer {
   padding-top: 85px;
   padding-left: 42px;
 }
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 160px;
+}
+
+.footer-left p {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Montserrat";
+  padding-top: 39px;
+}
+
+.footer-right h6 {
+  font-size: 21px;
+  line-height: 38px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+  margin-right: 122px;
+}
+
+.footer-right-item {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.footer-right-item:first-child {
+  padding-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.footer-bottom-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-right: 30px;
+}
+
+.footer-bottom p {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Bebas Neue";
+}
