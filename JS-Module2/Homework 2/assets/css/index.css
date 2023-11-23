@@ -3,6 +3,7 @@
 @import url("./choose.css");
 @import url("./order.css");
 @import url("./events.css");
+@import url("./reservation.css");
 
 .container {
   max-width: 1325px;
