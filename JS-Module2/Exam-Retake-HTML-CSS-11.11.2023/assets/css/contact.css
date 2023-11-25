@@ -1,0 +1,104 @@
+#contact {
+  padding-top: 106px;
+  padding-bottom: 80px;
+}
+
+#contact .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#contact h2 {
+  font-size: 36px;
+  line-height: 43px;
+  color: #212121;
+  font-weight: 400;
+  font-family: "Raleway";
+  text-align: center;
+  position: relative;
+  padding-bottom: 64px;
+  text-transform: uppercase;
+}
+
+#contact h2::after {
+  content: "";
+  position: absolute;
+  background-color: #ff8b38;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 64px;
+  height: 3px;
+}
+
+.contact-title-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans";
+  text-align: center;
+  padding-bottom: 83px;
+}
+
+.contact-form-left input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  max-width: 530px;
+  width: 100%;
+  font-size: 14px;
+  color: #bdbdbd;
+  font-weight: 400;
+  font-family: "Open Sans";
+  padding-top: 38px;
+  padding-left: 14px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  margin-top: 38px;
+}
+
+.contact-form-left input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  max-width: 530px;
+  width: 100%;
+  font-size: 14px;
+  color: #bdbdbd;
+  font-weight: 400;
+  font-family: "Open Sans";
+  padding-top: 7px;
+  margin-top: 38px;
+  padding-left: 14px;
+  padding-bottom: 7px;
+}
+
+.contact-form-left {
+  flex: 1 2 50%;
+  flex-wrap: wrap;
+}
+
+.contact-form-right {
+  flex: 1 2 45%;
+  align-self: flex-end;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-form-right textarea {
+  margin-top: 38px;
+  max-width: 530px;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  color: #bdbdbd;
+  font-weight: 400;
+  font-family: "Open Sans";
+  padding-bottom: 134px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+#contact button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}

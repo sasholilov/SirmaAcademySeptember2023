@@ -1,0 +1,77 @@
+#sublist {
+  padding-top: 106px;
+  padding-bottom: 134px;
+}
+
+#sublist .container {
+  justify-content: space-between;
+}
+
+.sublist-info-wrapper {
+  padding-bottom: 52px;
+}
+
+.sublist-info-wrapper h3 {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.sublist-info-wrapper h3::after {
+  content: "";
+  position: absolute;
+  background-color: #ff8b38;
+  top: 50px;
+  left: 0;
+  width: 64px;
+  height: 3px;
+}
+
+.sublist-info-wrapper p {
+  padding-top: 62px;
+}
+
+.sublist-information p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans";
+  max-width: 414px;
+}
+
+.sublist-information-sections p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans";
+  max-width: 360px;
+}
+
+.sublist-information-sections {
+  padding-left: 62px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.sublist-information-sections i {
+  border: 1px solid #ff8b38;
+  color: #ff8b38;
+  border-radius: 50%;
+  padding: 12px 10px 12px 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sublist-information-sections h4 {
+  font-size: 14px;
+  line-height: 17px;
+  color: #212121;
+  font-weight: 600;
+  font-family: "Open Sans";
+}
+
+.sublist-information-sections {
+  padding-bottom: 42px;
+}

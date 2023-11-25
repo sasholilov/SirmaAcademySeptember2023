@@ -1,0 +1,83 @@
+#why {
+  padding-top: 138px;
+  padding-bottom: 106px;
+}
+
+#why .container {
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  justify-content: space-between;
+}
+
+#why h2 {
+  font-size: 36px;
+  line-height: 43px;
+  color: #212121;
+  font-weight: 400;
+  font-family: "Raleway";
+  text-align: center;
+  position: relative;
+  padding-bottom: 64px;
+  text-transform: uppercase;
+}
+
+#why h2::after {
+  content: "";
+  position: absolute;
+  background-color: #ff8b38;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 64px;
+  height: 3px;
+}
+
+#why p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans";
+  text-align: center;
+}
+
+.why-description {
+  padding-bottom: 82px;
+}
+
+.why-item i {
+  color: #ff8b38;
+  padding: 12px 10px 12px 10px;
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ff8b38;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.why-item h3 {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.why-item p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans";
+  max-width: 350px;
+  text-align: center;
+}
