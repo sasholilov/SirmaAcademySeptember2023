@@ -46,9 +46,15 @@ function App() {
       console.log(data);
 
       const newDataArray = data.map((e) => e.split(";"));
-      console.log("new data array", newDataArray);
-      setText(newDataArray);
-      console.log(newDataArray[1][0]);
+      const newDataArrayWithObj = newDataArray.map((row) => {
+        return {
+          productId: row[0],
+          productName: row[1],
+          productModels: row[2],
+        };
+      });
+      console.log(newDataArrayWithObj);
+      setText(newDataArrayWithObj);
     };
   }
 
@@ -64,9 +70,20 @@ function App() {
       {text.length > 0 && (
         <div className="file-exercise">
           <div className="title">
-            <p>{text[0][0]}</p>
-            <p>{text[0][1]}</p>
-            <p>{text[0][2]}</p>
+            <p>{text[0].productId}</p>
+            <p>{text[0].productName}</p>
+            <p>{text[0].productModels}</p>
+          </div>
+          <div className="title">
+            {text
+              .map((e) => (
+                <div className="title-results">
+                  <p>{e.productId}</p>
+                  <p>{e.productName}</p>
+                  <p>{e.productModels}</p>
+                </div>
+              ))
+              .filter((e, index) => index > 0)}
           </div>
         </div>
       )}
