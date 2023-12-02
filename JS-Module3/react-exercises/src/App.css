@@ -6,10 +6,8 @@
 .data-header {
   max-width: 800px;
   border-radius: 18px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  transform: translate(0, 0);
   background-color: rgb(17, 17, 17);
   display: flex;
   justify-content: center;
@@ -32,4 +30,34 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.file-exercise {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: rgb(17, 17, 17);
+  color: beige;
+}
+
+.file-exercise {
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+
+.title-items {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
 }
