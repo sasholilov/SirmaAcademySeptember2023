@@ -14,4 +14,8 @@ function formatArrayToArrayWithObjects(array) {
   });
 }
 
-export { splitStringToArray, formatArrayToArrayWithObjects };
+function mostScoredInAGame(data) {
+  return data.sort((a, b) => b.score - a.score);
+}
+
+export { splitStringToArray, formatArrayToArrayWithObjects, mostScoredInAGame };
