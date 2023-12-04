@@ -1,0 +1,8 @@
+td {
+  text-align: center;
+  background-color: aliceblue;
+}
+
+td:last-child {
+  font-weight: bold;
+}

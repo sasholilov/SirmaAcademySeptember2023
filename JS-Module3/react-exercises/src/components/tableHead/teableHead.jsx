@@ -1,3 +1,4 @@
+import("./tableHead.css");
 const TeableHead = ({ data }) => {
   return (
     <thead>

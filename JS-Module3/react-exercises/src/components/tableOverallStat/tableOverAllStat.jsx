@@ -3,10 +3,13 @@ import TeableHead from "../tableHead/teableHead";
 
 const TableOverAllStat = ({ data }) => {
   return (
-    <table>
-      <TeableHead data={data} />
-      <TableData data={data} />
-    </table>
+    <div className="overall-stat">
+      <h2>Обща статистика</h2>
+      <table>
+        <TeableHead data={data} />
+        <TableData data={data} />
+      </table>
+    </div>
   );
 };
 

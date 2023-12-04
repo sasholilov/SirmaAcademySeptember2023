@@ -1,3 +1,4 @@
+import("./tableData.css");
 const TableData = ({ data }) => {
   return (
     <tbody>

@@ -1,0 +1,10 @@
+.btn-file {
+  color: rgb(104, 104, 104);
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 8px;
+}
+
+.btn-file button {
+  border: none;
+}
