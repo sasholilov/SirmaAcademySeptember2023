@@ -1,12 +1,12 @@
 import("./tableHead.css");
-const TeableHead = ({ data }) => {
+const TeableHead = () => {
   return (
     <thead>
       <tr>
-        <th>{data[0].playerName}</th>
-        <th>{data[0].team}</th>
-        <th>{data[0].timePlayed}</th>
-        <th>{data[0].score}</th>
+        <th>Име на играча</th>
+        <th>Отбор</th>
+        <th>Играно време (секунди)</th>
+        <th>Отбелязани точки</th>
       </tr>
     </thead>
   );

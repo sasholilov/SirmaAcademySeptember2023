@@ -5,7 +5,7 @@ import { mostScoredInAGame } from "../../utils/dataUtils";
 const TableTheMostScoredInAGame = ({ data }) => {
   const sortedArray = mostScoredInAGame(data);
   return (
-    <div className="overall-stat">
+    <div>
       <h2>Най много вкарани точки в един мач</h2>
       <table>
         <TeableHead data={sortedArray} />

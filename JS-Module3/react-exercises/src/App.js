@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import TableOverAllStat from "./components/tableOverallStat/tableOverAllStat";
 import TableTheMostScoredInAGame from "./components/tableTheMostScoredInAGame/tableTheMostScoredInAGame";
+import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGames/tableTheMostScoredInAllGames";
 import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
@@ -26,6 +27,7 @@ function App() {
         <div>
           <TableOverAllStat data={data} />
           <TableTheMostScoredInAGame data={data} />
+          <TableTheMostScoredInAllGames data={data} />
         </div>
       )}
       <Buttons type="file" onHandleChange={handleFileChange} />

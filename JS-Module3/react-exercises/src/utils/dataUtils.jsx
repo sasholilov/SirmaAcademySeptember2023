@@ -18,4 +18,30 @@ function mostScoredInAGame(data) {
   return data.sort((a, b) => b.score - a.score);
 }
 
-export { splitStringToArray, formatArrayToArrayWithObjects, mostScoredInAGame };
+function pointsInAllGames(data) {
+  let newArray = [];
+  let dataObj = {};
+
+  data.map((e) => {
+    if (dataObj[e.playerName] === undefined) {
+      dataObj[e.playerName] = {
+        playerName: e.playerName,
+        team: e.team,
+        timePlayed: e.timePlayed,
+        score: +e.score,
+      };
+    } else {
+      dataObj[e.playerName].score += +e.score;
+      newArray.push(dataObj[e.playerName]);
+    }
+  });
+
+  return newArray;
+}
+
+export {
+  splitStringToArray,
+  formatArrayToArrayWithObjects,
+  mostScoredInAGame,
+  pointsInAllGames,
+};
