@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import TableOverAllStat from "./components/tableOverallStat/tableOverAllStat";
-
-const reader = new FileReader();
+import {
+  splitStringToArray,
+  formatArrayToArrayWithObjects,
+} from "./utils/dataUtils";
 
 function App() {
   const [data, setdata] = useState([]);
@@ -14,23 +16,9 @@ function App() {
     const reader = new FileReader();
     reader.readAsText(file);
     reader.onload = function () {
-      const data = reader.result
-        .split(/(\r\n|\r|\n)/g)
-        .filter((value) => value.length > 2);
-      const newDataArray = data.map((e) => e.split(";"));
-
-      const newDataArrayWithObj = newDataArray.map((row) => {
-        return {
-          playerName: row[0],
-          team: row[1],
-          timePlayed: row[2],
-          score: row[3],
-        };
-      });
-      setdata(newDataArrayWithObj);
-
-      console.log("sortirano", sorterdArray);
-      console.log(newDataArrayWithObj);
+      const data = splitStringToArray(reader.result);
+      const newDataArray = formatArrayToArrayWithObjects(data);
+      setdata(newDataArray);
     };
   }
 
