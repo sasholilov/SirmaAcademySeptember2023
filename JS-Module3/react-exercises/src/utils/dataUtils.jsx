@@ -39,9 +39,33 @@ function pointsInAllGames(data) {
   return newArray;
 }
 
+function pointsPerSecond(data) {
+  let newArray = [];
+  let dataObj = {};
+
+  data.map((e) => {
+    if (dataObj[e.playerName] === undefined) {
+      dataObj[e.playerName] = {
+        playerName: e.playerName,
+        team: e.team,
+        timePlayed: +e.timePlayed,
+        score: +e.score,
+        pointsPerSecond: (e.score / e.timePlayed).toFixed(5),
+      };
+    } else {
+      dataObj[e.playerName].score += +e.score;
+      dataObj[e.playerName].timePlayed += +e.timePlayed;
+      newArray.push(dataObj[e.playerName]);
+    }
+  });
+
+  return newArray;
+}
+
 export {
   splitStringToArray,
   formatArrayToArrayWithObjects,
   mostScoredInAGame,
   pointsInAllGames,
+  pointsPerSecond,
 };

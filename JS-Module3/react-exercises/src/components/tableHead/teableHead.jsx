@@ -1,5 +1,5 @@
 import("./tableHead.css");
-const TeableHead = () => {
+const TeableHead = ({ showColumnPtsPerSec }) => {
   return (
     <thead>
       <tr>
@@ -7,6 +7,7 @@ const TeableHead = () => {
         <th>Отбор</th>
         <th>Играно време (секунди)</th>
         <th>Отбелязани точки</th>
+        {showColumnPtsPerSec && <th>Отбелязани точки за секунда</th>}
       </tr>
     </thead>
   );

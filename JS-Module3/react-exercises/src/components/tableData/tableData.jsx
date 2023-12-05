@@ -1,5 +1,5 @@
 import("./tableData.css");
-const TableData = ({ data }) => {
+const TableData = ({ data, showDataPtsPerSec }) => {
   return (
     <tbody>
       {data.map((e, index) => (
@@ -10,6 +10,7 @@ const TableData = ({ data }) => {
           <td>{e.team}</td>
           <td>{e.timePlayed}</td>
           <td>{e.score}</td>
+          {showDataPtsPerSec && <td>{e.pointsPerSecond}</td>}
         </tr>
       ))}
     </tbody>
