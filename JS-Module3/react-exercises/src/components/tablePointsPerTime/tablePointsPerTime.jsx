@@ -8,7 +8,7 @@ const TablePointsPerTime = ({ data }) => {
 
   return (
     <div>
-      <h2>Вкарани точки на база игрово време</h2>
+      <h2>Вкарани точки на база игрово време във всички мачове</h2>
       <table>
         <TeableHead showColumnPtsPerSec={true} showRankingHead={true} />
         <TableData

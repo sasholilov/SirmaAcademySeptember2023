@@ -62,10 +62,30 @@ function pointsPerSecond(data) {
   return newArray;
 }
 
+function pointsByTeamData(data) {
+  let newArray = [];
+  let dataObj = {};
+
+  data.forEach((e) => {
+    const teamIndex = newArray.findIndex((team) => team.team === e.team);
+    if (teamIndex !== -1) {
+      newArray[teamIndex].score += +e.score;
+    } else {
+      newArray.push({
+        team: e.team,
+        score: +e.score,
+      });
+    }
+  });
+
+  return newArray;
+}
+
 export {
   splitStringToArray,
   formatArrayToArrayWithObjects,
   mostScoredInAGame,
   pointsInAllGames,
   pointsPerSecond,
+  pointsByTeamData,
 };
