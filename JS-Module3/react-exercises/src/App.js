@@ -4,7 +4,7 @@ import TableOverAllStat from "./components/tableOverallStat/tableOverAllStat";
 import TableTheMostScoredInAGame from "./components/tableTheMostScoredInAGame/tableTheMostScoredInAGame";
 import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGames/tableTheMostScoredInAllGames";
 import TablePointsPerTime from "./components/tablePointsPerTime/tablePointsPerTime";
-import TablePointsByTeam from "./components/tablePointsByTeam/pointsByTeam";
+import TablePointsByTeam from "./components/tablePointsByTeam/TablePointsByTeam";
 import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
