@@ -19,48 +19,23 @@ function mostScoredInAGame(data) {
 }
 
 function pointsInAllGames(data) {
-  let newArray = [];
-  let dataObj = {};
-
-  data.map((e) => {
-    if (dataObj[e.playerName] === undefined) {
-      dataObj[e.playerName] = {
+  const newArray = [];
+  data.forEach((e) => {
+    const index = newArray.findIndex((el) => el.playerName === e.playerName);
+    if (index !== -1) {
+      newArray[index].score += +e.score;
+      newArray[index].timePlayed += +e.timePlayed;
+    } else {
+      newArray.push({
         playerName: e.playerName,
         team: e.team,
-        timePlayed: e.timePlayed,
+        timePlayed: +e.timePlayed,
         score: +e.score,
-      };
-    } else {
-      dataObj[e.playerName].score += +e.score;
-      newArray.push(dataObj[e.playerName]);
+      });
     }
   });
-
-  return newArray;
+  return newArray.sort((a, b) => b.score - a.score);
 }
-
-//function pointsPerSecond(data) {
-//  let newArray = [];
-//  let dataObj = {};
-//
-//  data.map((e) => {
-//    if (dataObj[e.playerName] === undefined) {
-//      dataObj[e.playerName] = {
-//        playerName: e.playerName,
-//        team: e.team,
-//        timePlayed: +e.timePlayed,
-//        score: +e.score,
-//        pointsPerSecond: (e.score / e.timePlayed).toFixed(5),
-//      };
-//    } else {
-//      dataObj[e.playerName].score += +e.score;
-//      dataObj[e.playerName].timePlayed += +e.timePlayed;
-//      newArray.push(dataObj[e.playerName]);
-//    }
-//  });
-//
-//  return newArray;
-//}
 
 function pointsPerSecond(data) {
   let newArray = [];
@@ -79,7 +54,7 @@ function pointsPerSecond(data) {
       });
     }
   });
-  return newArray;
+  return newArray.sort((a, b) => b.pointsPerSecond - a.pointsPerSecond);
 }
 
 function pointsByTeamData(data) {
@@ -97,7 +72,7 @@ function pointsByTeamData(data) {
     }
   });
 
-  return newArray;
+  return newArray.sort((a, b) => b.score - a.score);
 }
 
 export {

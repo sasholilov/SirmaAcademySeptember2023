@@ -4,7 +4,6 @@ import { pointsPerSecond } from "../../utils/dataUtils";
 
 const TablePointsPerTime = ({ data }) => {
   const newData = pointsPerSecond(data);
-  newData.sort((a, b) => b.pointsPerSecond - a.pointsPerSecond);
 
   return (
     <div>

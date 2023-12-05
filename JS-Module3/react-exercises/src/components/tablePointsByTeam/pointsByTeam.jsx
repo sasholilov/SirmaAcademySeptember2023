@@ -2,7 +2,6 @@ import { pointsByTeamData } from "../../utils/dataUtils";
 
 const TablePointsByTeam = ({ data }) => {
   const newData = pointsByTeamData(data);
-  newData.sort((a, b) => b.score - a.score);
 
   return (
     <table>
