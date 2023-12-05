@@ -10,8 +10,12 @@ const TablePointsPerTime = ({ data }) => {
     <div>
       <h2>Вкарани точки на база игрово време</h2>
       <table>
-        <TeableHead showColumnPtsPerSec={true} />
-        <TableData data={newData} showDataPtsPerSec={true} />
+        <TeableHead showColumnPtsPerSec={true} showRankingHead={true} />
+        <TableData
+          data={newData}
+          showDataPtsPerSec={true}
+          showDataRanking={true}
+        />
       </table>
     </div>
   );

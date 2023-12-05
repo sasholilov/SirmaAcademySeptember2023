@@ -8,8 +8,8 @@ const TableTheMostScoredInAllGames = ({ data }) => {
     <div>
       <h2>Най много вкарани точки във всички мачове</h2>
       <table>
-        <TeableHead />
-        <TableData data={newArr} />
+        <TeableHead showRankingHead={true} />
+        <TableData data={newArr} showDataRanking={true} />
       </table>
     </div>
   );
