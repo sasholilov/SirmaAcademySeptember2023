@@ -5,6 +5,7 @@ import TableTheMostScoredInAGame from "./components/tableTheMostScoredInAGame/ta
 import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGames/tableTheMostScoredInAllGames";
 import TablePointsPerTime from "./components/tablePointsPerTime/tablePointsPerTime";
 import TablePointsByTeam from "./components/tablePointsByTeam/TablePointsByTeam";
+import TableBestPlayerInTeam from "./components/tableBestPlayerInTeam/TableBestPlayeInTeam";
 import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
@@ -32,6 +33,7 @@ function App() {
           <TableTheMostScoredInAllGames data={data} />
           <TablePointsPerTime data={data} />
           <TablePointsByTeam data={data} />
+          <TableBestPlayerInTeam data={data} />
         </div>
       )}
       <Buttons type="file" onHandleChange={handleFileChange} />

@@ -75,6 +75,29 @@ function pointsByTeamData(data) {
   return newArray.sort((a, b) => b.score - a.score);
 }
 
+function bestPlayerInTeamData(data) {
+  let newArray = [];
+  const newDataArray = pointsInAllGames(data);
+
+  newDataArray.forEach((e) => {
+    const teamIndex = newArray.findIndex((team) => team.team === e.team);
+    if (teamIndex !== -1) {
+      if (newArray[teamIndex].score < e.score) {
+        newArray[teamIndex].score = e.score;
+        newArray[teamIndex].playerName = e.playerName;
+      }
+    } else {
+      newArray.push({
+        playerName: e.playerName,
+        team: e.team,
+        score: e.score,
+      });
+    }
+  });
+
+  return newArray.sort((a, b) => b.score - a.score);
+}
+
 export {
   splitStringToArray,
   formatArrayToArrayWithObjects,
@@ -82,4 +105,5 @@ export {
   pointsInAllGames,
   pointsPerSecond,
   pointsByTeamData,
+  bestPlayerInTeamData,
 };
