@@ -40,13 +40,11 @@ function App() {
       setErrorMsg(errorMessages);
     };
   }
-
   function showHideTablesHandler(e) {
     setShowTable(() => {
       return showHideTablesProp(e);
     });
   }
-
   return (
     <div>
       {data.length > 0 && errorMsg.length === 0 && (
