@@ -13,7 +13,7 @@ import {
 } from "./utils/dataUtils";
 import Buttons from "./components/buttons/ButtonFile";
 import { validationFileData } from "./utils/validations";
-import { showHideTables } from "./utils/showHideTables";
+import { showHideTablesProp } from "./utils/showHideTablesProp";
 import ButtonTabs from "./components/buttons/ButtonTabs";
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
 
   function showHideTablesHandler(e) {
     setShowTable(() => {
-      return showHideTables(e);
+      return showHideTablesProp(e);
     });
   }
 

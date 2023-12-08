@@ -1,4 +1,4 @@
-const showHideTables = function (e) {
+const showHideTablesProp = function (e) {
   const newState = {
     showOverAll: false,
     showMstScInGame: false,
@@ -11,4 +11,4 @@ const showHideTables = function (e) {
   return newState;
 };
 
-export { showHideTables };
+export { showHideTablesProp };
