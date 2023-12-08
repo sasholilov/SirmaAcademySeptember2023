@@ -6,6 +6,7 @@ import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGa
 import TablePointsPerTime from "./components/tablePointsPerTime/tablePointsPerTime";
 import TablePointsByTeam from "./components/tablePointsByTeam/TablePointsByTeam";
 import TableBestPlayerInTeam from "./components/tableBestPlayerInTeam/TableBestPlayeInTeam";
+import ErrorTextComponent from "./components/errorTextComponent/ErrorTextComponent";
 import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div>
-      {data.length > 0 && (
+      {data.length > 0 && errorMsg.length === 0 && (
         <div>
           <TableOverAllStat data={data} />
           <TableTheMostScoredInAGame data={data} />
@@ -42,8 +43,10 @@ function App() {
           <TableBestPlayerInTeam data={data} />
         </div>
       )}
+      {errorMsg.length > 0 && <ErrorTextComponent errorArray={errorMsg} />}
       <Buttons type="file" onHandleChange={handleFileChange} />
     </div>
   );
 }
+
 export default App;
