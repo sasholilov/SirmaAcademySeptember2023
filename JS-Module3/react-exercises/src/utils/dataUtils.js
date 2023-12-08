@@ -37,24 +37,28 @@ function pointsInAllGames(data) {
   return newArray.sort((a, b) => b.score - a.score);
 }
 
-function pointsPerSecond(data) {
-  let newArray = [];
-  data.forEach((player) => {
-    const index = newArray.findIndex((e) => e.playerName === player.playerName);
+function pointsPerSecond(dataPoints) {
+  console.log(dataPoints);
+  let newArrayData = [];
+  dataPoints.map((player) => {
+    const index = newArrayData.findIndex(
+      (e) => e.playerName === player.playerName
+    );
     if (index !== -1) {
-      newArray[index].score += +player.score;
-      newArray[index].timePlayed += +player.timePlayed;
+      newArrayData[index].score += +player.score;
+      newArrayData[index].timePlayed += +player.timePlayed;
     } else {
-      newArray.push({
+      newArrayData.push({
         playerName: player.playerName,
         team: player.team,
         timePlayed: +player.timePlayed,
         score: +player.score,
-        pointsPerSecond: (player.score / player.timePlayed).toFixed(5),
+        pointsPerSecond: player.score / player.timePlayed,
       });
     }
   });
-  return newArray.sort((a, b) => b.pointsPerSecond - a.pointsPerSecond);
+  console.log(newArrayData);
+  return newArrayData.sort((a, b) => b.pointsPerSecond - a.pointsPerSecond);
 }
 
 function pointsByTeamData(data) {

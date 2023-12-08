@@ -3,7 +3,7 @@ import TeableHead from "../tableHead/TeableHead";
 import { pointsPerSecond } from "../../utils/dataUtils";
 
 const TablePointsPerTime = ({ data }) => {
-  const newData = pointsPerSecond(data);
+  const newDataPoints = pointsPerSecond(data);
 
   return (
     <div>
@@ -11,7 +11,7 @@ const TablePointsPerTime = ({ data }) => {
       <table>
         <TeableHead showColumnPtsPerSec={true} showRankingHead={true} />
         <TableData
-          data={newData}
+          data={newDataPoints}
           showDataPtsPerSec={true}
           showDataRanking={true}
         />
