@@ -42,17 +42,8 @@ function App() {
   }
 
   function showHideTablesHandler(e) {
-    setShowTable((prev) => {
-      const newState = {
-        showOverAll: false,
-        showMstScInGame: false,
-        showMstScInAllGames: false,
-        showPtsPerTime: false,
-        showPtsByTeam: false,
-        showBestPlayer: false,
-      };
-      newState[e.target.value] = true;
-      return newState;
+    setShowTable(() => {
+      return showHideTables(e);
     });
   }
 

@@ -53,7 +53,7 @@ function pointsPerSecond(dataPoints) {
         team: player.team,
         timePlayed: +player.timePlayed,
         score: +player.score,
-        pointsPerSecond: player.score / player.timePlayed,
+        pointsPerSecond: (player.score / player.timePlayed).toFixed(6),
       });
     }
   });
