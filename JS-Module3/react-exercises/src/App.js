@@ -11,9 +11,12 @@ import {
   formatArrayToArrayWithObjects,
 } from "./utils/dataUtils";
 import Buttons from "./components/buttons/buttonFile";
+import { validationFileData } from "./utils/validations";
 
 function App() {
   const [data, setdata] = useState([]);
+  const [errorMsg, setErrorMsg] = useState([]);
+
   function handleFileChange(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -21,9 +24,12 @@ function App() {
     reader.onload = function () {
       const data = splitStringToArray(reader.result);
       const newDataArray = formatArrayToArrayWithObjects(data);
+      const errorMessages = validationFileData(newDataArray);
       setdata(newDataArray);
+      setErrorMsg(errorMessages);
     };
   }
+
   return (
     <div>
       {data.length > 0 && (
