@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import TableOverAllStat from "./components/tableOverallStat/tableOverAllStat";
-import TableTheMostScoredInAGame from "./components/tableTheMostScoredInAGame/tableTheMostScoredInAGame";
-import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGames/tableTheMostScoredInAllGames";
-import TablePointsPerTime from "./components/tablePointsPerTime/tablePointsPerTime";
+import TableOverAllStat from "./components/tableOverallStat/TableOverAllStat";
+import TableTheMostScoredInAGame from "./components/tableTheMostScoredInAGame/TableTheMostScoredInAGame";
+import TableTheMostScoredInAllGames from "./components/tableTheMostScoredInAllGames/TableTheMostScoredInAllGames";
+import TablePointsPerTime from "./components/tablePointsPerTime/TablePointsPerTime";
 import TablePointsByTeam from "./components/tablePointsByTeam/TablePointsByTeam";
 import TableBestPlayerInTeam from "./components/tableBestPlayerInTeam/TableBestPlayeInTeam";
 import ErrorTextComponent from "./components/errorTextComponent/ErrorTextComponent";
@@ -11,7 +11,7 @@ import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
 } from "./utils/dataUtils";
-import Buttons from "./components/buttons/buttonFile";
+import Buttons from "./components/buttons/ButtonFile";
 import { validationFileData } from "./utils/validations";
 
 function App() {

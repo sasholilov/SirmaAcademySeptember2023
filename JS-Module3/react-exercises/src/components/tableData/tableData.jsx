@@ -1,4 +1,4 @@
-import("./tableData.css");
+import("./TableData.css");
 const TableData = ({ data, showDataPtsPerSec, showDataRanking }) => {
   return (
     <tbody>

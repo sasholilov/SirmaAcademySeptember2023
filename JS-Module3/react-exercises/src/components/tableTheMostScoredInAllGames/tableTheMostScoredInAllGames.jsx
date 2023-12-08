@@ -1,5 +1,5 @@
-import TableData from "../tableData/tableData";
-import TeableHead from "../tableHead/teableHead";
+import TableData from "../tableData/TableData";
+import TeableHead from "../tableHead/TeableHead";
 import { pointsInAllGames } from "../../utils/dataUtils";
 
 const TableTheMostScoredInAllGames = ({ data }) => {
