@@ -50,36 +50,38 @@ function App() {
     <div className="container">
       {data.length > 0 && errorMsg.length === 0 && (
         <div>
-          <ButtonTabs
-            text="Overall"
-            value="showOverAll"
-            clickFunction={showHideTablesHandler}
-          />
-          <ButtonTabs
-            text="Most scored points in a game"
-            value="showMstScInGame"
-            clickFunction={showHideTablesHandler}
-          />
-          <ButtonTabs
-            value="showMstScInAllGames"
-            text="Most scored points in all games"
-            clickFunction={showHideTablesHandler}
-          />
-          <ButtonTabs
-            value="showPtsPerTime"
-            text="Points per time"
-            clickFunction={showHideTablesHandler}
-          />
-          <ButtonTabs
-            value="showPtsByTeam"
-            text="Points by Team"
-            clickFunction={showHideTablesHandler}
-          />
-          <ButtonTabs
-            value="showBestPlayer"
-            text="Best player in team"
-            clickFunction={showHideTablesHandler}
-          />
+          <div className="button-tabs">
+            <ButtonTabs
+              text="Обща статистика"
+              value="showOverAll"
+              clickFunction={showHideTablesHandler}
+            />
+            <ButtonTabs
+              text="Отбелязани точки в един мач"
+              value="showMstScInGame"
+              clickFunction={showHideTablesHandler}
+            />
+            <ButtonTabs
+              value="showMstScInAllGames"
+              text="Отбелязани точки във всички мачове"
+              clickFunction={showHideTablesHandler}
+            />
+            <ButtonTabs
+              value="showPtsPerTime"
+              text="Отбелязани точки за игрово време"
+              clickFunction={showHideTablesHandler}
+            />
+            <ButtonTabs
+              value="showPtsByTeam"
+              text="Точки по отбори"
+              clickFunction={showHideTablesHandler}
+            />
+            <ButtonTabs
+              value="showBestPlayer"
+              text="Най-добър играч в отбор"
+              clickFunction={showHideTablesHandler}
+            />
+          </div>
           {showTable.showOverAll && <TableOverAllStat data={data} />}
           {showTable.showMstScInGame && (
             <TableTheMostScoredInAGame data={data} />

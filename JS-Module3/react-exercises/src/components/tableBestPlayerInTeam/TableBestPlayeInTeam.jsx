@@ -5,7 +5,7 @@ const TableBestPlayerInTeam = ({ data }) => {
 
   return (
     <div>
-      <h2>Най-добър играч в отбор</h2>
+      <h2 className="title">Най-добър играч в отбор</h2>
       <table>
         <thead>
           <tr>

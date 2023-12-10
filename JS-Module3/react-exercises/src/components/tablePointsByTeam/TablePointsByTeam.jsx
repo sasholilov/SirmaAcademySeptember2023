@@ -5,7 +5,7 @@ const TablePointsByTeam = ({ data }) => {
 
   return (
     <div>
-      <h2>Общо вкарани точки по отбори във всички мачове</h2>
+      <h2 className="title">Общо вкарани точки по отбори във всички мачове</h2>
       <table>
         <thead>
           <tr>

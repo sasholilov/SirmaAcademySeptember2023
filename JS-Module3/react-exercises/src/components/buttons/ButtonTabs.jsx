@@ -1,3 +1,5 @@
+import("./ButtonTabs.css");
+
 const ButtonTabs = function ({ text, value, clickFunction }) {
   return (
     <button value={value} onClick={(e) => clickFunction(e)}>

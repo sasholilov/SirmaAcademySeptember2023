@@ -18,4 +18,23 @@ body {
 
 table {
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid white;
+}
+
+.title {
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.button-tabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9e9ed;
+}
+
+.button-tabs button:hover {
+  background-color: #dadada;
 }
