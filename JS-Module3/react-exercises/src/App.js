@@ -10,6 +10,7 @@ import ErrorTextComponent from "./components/errorTextComponent/ErrorTextCompone
 import {
   splitStringToArray,
   formatArrayToArrayWithObjects,
+  formatJsonFile,
 } from "./utils/dataUtils";
 import Buttons from "./components/buttons/ButtonFile";
 import { validationFileData } from "./utils/validations";
@@ -31,14 +32,25 @@ function App() {
   function handleFileChange(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = function () {
-      const data = splitStringToArray(reader.result);
-      const newDataArray = formatArrayToArrayWithObjects(data);
-      const errorMessages = validationFileData(newDataArray);
-      setdata(newDataArray);
-      setErrorMsg(errorMessages);
-    };
+    if (file.type === "application/json") {
+      reader.readAsText(file);
+      reader.onload = function () {
+        const data = formatJsonFile(reader.result);
+        setdata(data);
+        console.log(data);
+      };
+    } else if (file.type === "application/vnd.ms-excel") {
+      reader.readAsText(file);
+      reader.onload = function () {
+        const data = splitStringToArray(reader.result);
+        const newDataArray = formatArrayToArrayWithObjects(data);
+        const errorMessages = validationFileData(newDataArray);
+        setdata(newDataArray);
+        setErrorMsg(errorMessages);
+      };
+    } else {
+      setErrorMsg(["Ivalid file"]);
+    }
   }
 
   function showHideTablesHandler(e) {

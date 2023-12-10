@@ -14,6 +14,23 @@ function formatArrayToArrayWithObjects(array) {
   });
 }
 
+function formatJsonFile(jsonFile) {
+  const array = jsonFile.split("\r\n");
+  array.pop();
+  array.pop();
+  array.shift();
+  const cleanedArray = array.map((line) =>
+    JSON.parse(
+      line
+        .replace(/[^{}]*$/, "")
+        .replace(/\s+/g, "")
+        .trim()
+    )
+  );
+
+  return cleanedArray;
+}
+
 function mostScoredInAGame(data) {
   return data.sort((a, b) => b.score - a.score);
 }
@@ -110,4 +127,5 @@ export {
   pointsPerSecond,
   pointsByTeamData,
   bestPlayerInTeamData,
+  formatJsonFile,
 };
