@@ -40,13 +40,14 @@ function App() {
       setErrorMsg(errorMessages);
     };
   }
+
   function showHideTablesHandler(e) {
     setShowTable(() => {
       return showHideTablesProp(e);
     });
   }
   return (
-    <div>
+    <div className="container">
       {data.length > 0 && errorMsg.length === 0 && (
         <div>
           <ButtonTabs
