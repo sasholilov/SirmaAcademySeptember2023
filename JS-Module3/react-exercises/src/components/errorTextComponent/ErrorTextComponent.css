@@ -1,0 +1,18 @@
+.error-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(255, 214, 214);
+  margin-top: 25px;
+  border-radius: 8px;
+}
+
+.error-container ul li {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.error-container h2 {
+  text-align: center;
+  padding-bottom: 25px;
+}

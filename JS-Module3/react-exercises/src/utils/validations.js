@@ -5,7 +5,7 @@ const validationFileData = function (array) {
   array.map((element, index) => {
     let hasError = Object.values(element).some((e) => e === "");
     if (hasError) {
-      errText = `There is ivalid data in row ${index}`;
+      errText = `Невалидни данни на ред: ${index}`;
       msgArray.push(errText);
     }
   });
