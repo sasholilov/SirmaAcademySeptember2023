@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React app for basketball data statistics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Основни данни
+- Имена на играча
+- Отбор
+- Играно време (секунди),
+- Отбелязани точки
 
 ## Available Scripts
 
