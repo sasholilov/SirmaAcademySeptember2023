@@ -55,7 +55,6 @@ function pointsInAllGames(data) {
 }
 
 function pointsPerSecond(dataPoints) {
-  console.log(dataPoints);
   let newArrayData = [];
   dataPoints.map((player) => {
     const index = newArrayData.findIndex(
@@ -74,7 +73,6 @@ function pointsPerSecond(dataPoints) {
       });
     }
   });
-  console.log(newArrayData);
   return newArrayData.sort((a, b) => b.pointsPerSecond - a.pointsPerSecond);
 }
 

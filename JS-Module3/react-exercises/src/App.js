@@ -37,7 +37,6 @@ function App() {
       reader.onload = function () {
         const data = formatJsonFile(reader.result);
         setdata(data);
-        console.log(data);
       };
     } else if (file.type === "application/vnd.ms-excel") {
       reader.readAsText(file);
