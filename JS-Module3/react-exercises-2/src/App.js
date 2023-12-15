@@ -8,7 +8,30 @@ import { useState } from "react";
 function App() {
   const [orderIds, setOrderIds] = useState([]);
   const [clicked, setClicked] = useState(false);
-  const [cart, setCart] = useState([]);
+  const [cartArr, setCartArr] = useState([]);
+
+  function handleAddToCart(product) {
+    const cartObj = {
+      productId: product[0],
+      productImage: product[1],
+      productName: product[2],
+      productRef: product[3],
+      productPrice: product[6],
+      quantity: 1,
+    };
+
+    const index = cartArr.findIndex((q) => q.productId === product[0]);
+
+    if (index === -1) {
+      setCartArr((prevCart) => [...prevCart, cartObj]);
+    } else {
+      const updatedCart = cartArr.map((item, i) =>
+        i === index ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCartArr(updatedCart);
+    }
+    console.log(cartArr);
+  }
 
   function handleFileOrdersChange(e) {
     const file = e.target.files[0];
@@ -28,6 +51,22 @@ function App() {
     setClicked(true);
   };
 
+  const handleDecreaseCart = function (product, index) {
+    const updatedCart = cartArr
+      .map((item, i) =>
+        i === index ? { ...item, quantity: item.quantity - 1 } : item
+      )
+      .filter((e) => e.quantity > 0);
+    setCartArr(updatedCart);
+  };
+
+  const handleIncreaseCart = function (product, index) {
+    const updatedCart = cartArr.map((item, i) =>
+      i === index ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCartArr(updatedCart);
+  };
+
   return (
     <div>
       <ButtonFile
@@ -40,19 +79,49 @@ function App() {
         <div className="result container">
           <h2>Каталог</h2>
           <div className="product-wrapper">
-            {orderIds.map((e) => (
-              <div className="product">
-                <h4>{e[2].slice(1).slice(0, -1)}</h4>
-                <img src={e[1]} />
+            {orderIds.map((pr) => (
+              <div key={pr[0]} className="product">
+                <h4>{pr[2].slice(1).slice(0, -1)}</h4>
+                <img src={pr[1]} />
                 <div className="footer-product">
-                  <span className="price">{Number(e[5]).toFixed(2)}лв.</span>
-                  <button>Добави в количката</button>
+                  <span className="price">{Number(pr[5]).toFixed(2)}лв.</span>
+                  <button onClick={() => handleAddToCart(pr)}>
+                    Добави в количката
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       )}
+      <div className="cart-items container">
+        <h2>
+          Брой продукти:{" "}
+          {cartArr.reduce((acc, item) => {
+            return acc + item.quantity;
+          }, 0)}
+        </h2>
+        {cartArr.map((e, index) => (
+          <div className="product-list">
+            <span>{index + 1}</span>
+            <img src={e.productImage} />
+            <p>{e.productName}</p>
+            <p className="qty">
+              <span onClick={() => handleDecreaseCart(e, index)}>-</span>
+              <span>{e.quantity}</span>
+              <span onClick={() => handleIncreaseCart(e, index)}>+</span>
+            </p>
+            <p>{e.productPrice * e.quantity}лв.</p>
+          </div>
+        ))}
+        <h2>
+          Обща сума:{" "}
+          {cartArr.reduce((acc, item) => {
+            return acc + +item.productPrice * item.quantity;
+          }, 0)}
+          лв.
+        </h2>
+      </div>
     </div>
   );
 }
