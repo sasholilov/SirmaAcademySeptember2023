@@ -25,6 +25,15 @@ body {
   margin-bottom: 50px;
 }
 
+.order-confirm {
+  text-align: center;
+  border: thin solid grey;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
 .result h2 {
   margin-bottom: 20px;
   text-align: center;
@@ -50,11 +59,14 @@ body {
   border-radius: 2px;
   max-width: 250px;
   position: relative;
+  padding: 20px;
+  background-color: white;
 }
 
 .product img {
   max-width: 250px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   width: 100%;
 }
 
@@ -63,6 +75,7 @@ body {
   bottom: 0;
   right: 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -77,6 +90,7 @@ body {
 .price {
   color: red;
   font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .product-list img {

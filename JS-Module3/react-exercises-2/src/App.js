@@ -9,6 +9,7 @@ function App() {
   const [orderIds, setOrderIds] = useState([]);
   const [clicked, setClicked] = useState(false);
   const [cartArr, setCartArr] = useState([]);
+  const [orderComplete, setOrderComplete] = useState([]);
 
   function handleAddToCart(product) {
     const cartObj = {
@@ -47,6 +48,13 @@ function App() {
     };
   }
 
+  function handleOrder() {
+    const completeOrderArr = cartArr.map((e) => e);
+    setCartArr([]);
+    console.log(completeOrderArr);
+    setOrderComplete(completeOrderArr);
+  }
+
   const handleOnCheck = function () {
     setClicked(true);
   };
@@ -70,7 +78,7 @@ function App() {
   return (
     <div>
       <ButtonFile
-        text="Качете CSV файл с поръчките от сайта"
+        text="Качете CSV файл с продукти от сайта"
         type="file"
         onHandleChange={handleFileOrdersChange}
       />
@@ -94,34 +102,49 @@ function App() {
           </div>
         </div>
       )}
-      <div className="cart-items container">
-        <h2>
-          Брой продукти:{" "}
-          {cartArr.reduce((acc, item) => {
-            return acc + item.quantity;
-          }, 0)}
-        </h2>
-        {cartArr.map((e, index) => (
-          <div className="product-list">
-            <span>{index + 1}</span>
-            <img src={e.productImage} />
-            <p>{e.productName}</p>
-            <p className="qty">
-              <span onClick={() => handleDecreaseCart(e, index)}>-</span>
-              <span>{e.quantity}</span>
-              <span onClick={() => handleIncreaseCart(e, index)}>+</span>
-            </p>
-            <p>{e.productPrice * e.quantity}лв.</p>
-          </div>
-        ))}
-        <h2>
-          Обща сума:{" "}
-          {cartArr.reduce((acc, item) => {
-            return acc + +item.productPrice * item.quantity;
-          }, 0)}
-          лв.
-        </h2>
-      </div>
+      {cartArr.length > 0 && (
+        <div className="cart-items container">
+          <h2>
+            Брой продукти:{" "}
+            {cartArr.reduce((acc, item) => {
+              return acc + item.quantity;
+            }, 0)}
+          </h2>
+          {cartArr.map((e, index) => (
+            <div className="product-list">
+              <span>{index + 1}</span>
+              <img src={e.productImage} />
+              <p>{e.productName}</p>
+              <p className="qty">
+                <span onClick={() => handleDecreaseCart(e, index)}>-</span>
+                <span>{e.quantity}</span>
+                <span onClick={() => handleIncreaseCart(e, index)}>+</span>
+              </p>
+              <p>{(e.productPrice * e.quantity).toFixed(2)}лв</p>
+            </div>
+          ))}
+          <h2>
+            Обща сума:{" "}
+            {cartArr
+              .reduce((acc, item) => {
+                return acc + +item.productPrice * item.quantity;
+              }, 0)
+              .toFixed(2)}
+            лв
+          </h2>
+          <button onClick={handleOrder}>ПОРЪЧАЙ</button>
+        </div>
+      )}
+      {cartArr.length === 0 && (
+        <div className="cart-items container">
+          <h2>Нямате добавени продукти в количката</h2>
+        </div>
+      )}
+      {orderComplete.length > 0 && (
+        <div className="order-confirm container">
+          <h2>Успешно завършена поръчка</h2>
+        </div>
+      )}
     </div>
   );
 }
