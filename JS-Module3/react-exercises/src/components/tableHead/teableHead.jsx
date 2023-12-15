@@ -1,4 +1,4 @@
-import("./TableHead.css");
+import "./TableHead.css";
 const TeableHead = ({ showColumnPtsPerSec, showRankingHead }) => {
   return (
     <thead>

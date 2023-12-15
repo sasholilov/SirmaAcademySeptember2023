@@ -1,4 +1,4 @@
-import("./ErrorTextComponent.css");
+import "./ErrorTextComponent.css";
 
 const ErrorTextComponent = function ({ errorArray }) {
   return (

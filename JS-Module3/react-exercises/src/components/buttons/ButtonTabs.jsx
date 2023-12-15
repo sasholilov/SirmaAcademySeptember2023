@@ -1,4 +1,4 @@
-import("./ButtonTabs.css");
+import "./ButtonTabs.css";
 
 const ButtonTabs = function ({ text, value, clickFunction }) {
   return (

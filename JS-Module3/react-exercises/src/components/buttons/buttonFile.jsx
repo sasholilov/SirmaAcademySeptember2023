@@ -1,4 +1,4 @@
-import("./ButtonFile.css");
+import "./ButtonFile.css";
 
 const Buttons = ({ type, onHandleChange }) => {
   if (type === "file")
