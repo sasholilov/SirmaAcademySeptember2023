@@ -12,6 +12,7 @@ function App() {
   const [orderComplete, setOrderComplete] = useState([]);
 
   function handleAddToCart(product) {
+    setOrderComplete([]);
     const cartObj = {
       productId: product[0],
       productImage: product[1],
@@ -102,10 +103,11 @@ function App() {
           </div>
         </div>
       )}
+
       {cartArr.length > 0 && (
         <div className="cart-items container">
           <h2>
-            Брой продукти:{" "}
+            Добавени продукти в количката:{" "}
             {cartArr.reduce((acc, item) => {
               return acc + item.quantity;
             }, 0)}
@@ -135,7 +137,7 @@ function App() {
           <button onClick={handleOrder}>ПОРЪЧАЙ</button>
         </div>
       )}
-      {cartArr.length === 0 && (
+      {cartArr.length === 0 && orderIds.length > 0 && clicked && (
         <div className="cart-items container">
           <h2>Нямате добавени продукти в количката</h2>
         </div>
