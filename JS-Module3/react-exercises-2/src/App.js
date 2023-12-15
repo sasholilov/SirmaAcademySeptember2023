@@ -1,14 +1,27 @@
+import { act } from "react-dom/test-utils";
 import "./App.css";
 import ButtonCheck from "./components/buttons/ButtonCheck";
 import ButtonFile from "./components/buttons/ButtonFile";
 import { splitStringToArray } from "./utils/dataUtils";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 function App() {
+  const reducer = function (state, action) {
+    switch (action.type) {
+      case "increment":
+        return { count: state.count + 1 };
+      case "decrement":
+        return { count: state.count - 1 };
+      default:
+        return state;
+    }
+  };
+
   const [orderIds, setOrderIds] = useState([]);
   const [econtIds, setEcontIds] = useState([]);
   const [clicked, setClicked] = useState(false);
   const [result, setResult] = useState([]);
+  const [state, dispatch] = useReducer(reducer, { count: 1 });
 
   function handleFileOrdersChange(e) {
     const file = e.target.files[0];
@@ -74,6 +87,21 @@ function App() {
           ))}
         </div>
       )}
+      <h1>Counter: {state.count}</h1>
+      <button
+        onClick={() => {
+          dispatch({ type: "increment" });
+        }}
+      >
+        Увеличи
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "decrement" });
+        }}
+      >
+        Намали
+      </button>
     </div>
   );
 }
