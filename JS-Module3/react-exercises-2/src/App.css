@@ -32,3 +32,44 @@ body {
 .result ul li {
   list-style: none;
 }
+
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.product {
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 2px;
+  max-width: 250px;
+  position: relative;
+}
+
+.product img {
+  max-width: 250px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.footer-product {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-product button {
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.price {
+  color: red;
+  font-weight: 700;
+}

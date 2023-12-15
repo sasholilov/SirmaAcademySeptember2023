@@ -3,25 +3,12 @@ import "./App.css";
 import ButtonCheck from "./components/buttons/ButtonCheck";
 import ButtonFile from "./components/buttons/ButtonFile";
 import { splitStringToArray } from "./utils/dataUtils";
-import { useState, useReducer } from "react";
+import { useState } from "react";
 
 function App() {
-  const reducer = function (state, action) {
-    switch (action.type) {
-      case "increment":
-        return { count: state.count + 1 };
-      case "decrement":
-        return { count: state.count - 1 };
-      default:
-        return state;
-    }
-  };
-
   const [orderIds, setOrderIds] = useState([]);
-  const [econtIds, setEcontIds] = useState([]);
   const [clicked, setClicked] = useState(false);
-  const [result, setResult] = useState([]);
-  const [state, dispatch] = useReducer(reducer, { count: 1 });
+  const [cart, setCart] = useState([]);
 
   function handleFileOrdersChange(e) {
     const file = e.target.files[0];
@@ -31,37 +18,14 @@ function App() {
       const data = splitStringToArray(reader.result);
       const newArray = data.map((e) => e.split(";"));
       newArray.shift();
-      const arrayWithOrders = newArray.map((o) => o[0]);
+      const arrayWithOrders = newArray.map((o) => o);
+      console.log(arrayWithOrders);
       setOrderIds(arrayWithOrders);
-    };
-  }
-
-  function handleEcontOrdersChange(e) {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = function () {
-      const data = splitStringToArray(reader.result);
-      const newDataArray = data.map((a) => a.split("\t"));
-      newDataArray.shift();
-      const arrayWithOrdersId = newDataArray.map((o) => o[42].slice(10, 15));
-      setEcontIds(arrayWithOrdersId);
     };
   }
 
   const handleOnCheck = function () {
     setClicked(true);
-    let diffArray = [];
-    if (econtIds.length > orderIds.length) {
-      diffArray = econtIds.filter((x) => !orderIds.includes(x));
-    } else {
-      diffArray = orderIds.filter((x) => !econtIds.includes(x));
-    }
-
-    console.log(econtIds.length);
-    console.log(orderIds.length);
-    console.log(diffArray);
-    setResult(diffArray);
   };
 
   return (
@@ -71,37 +35,24 @@ function App() {
         type="file"
         onHandleChange={handleFileOrdersChange}
       />
-      <ButtonFile
-        text="Качете CSV файл с пратките от Econt"
-        type="file"
-        onHandleChange={handleEcontOrdersChange}
-      />
       <ButtonCheck onCheck={handleOnCheck} />
-      {clicked && orderIds.length > 0 && econtIds.length > 0 && (
+      {clicked && orderIds.length > 0 && (
         <div className="result container">
-          <h2>Поръчки за проверка</h2>
-          {result.map((e) => (
-            <ul>
-              <li>{e}</li>
-            </ul>
-          ))}
+          <h2>Каталог</h2>
+          <div className="product-wrapper">
+            {orderIds.map((e) => (
+              <div className="product">
+                <h4>{e[2].slice(1).slice(0, -1)}</h4>
+                <img src={e[1]} />
+                <div className="footer-product">
+                  <span className="price">{Number(e[5]).toFixed(2)}лв.</span>
+                  <button>Добави в количката</button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
-      <h1>Counter: {state.count}</h1>
-      <button
-        onClick={() => {
-          dispatch({ type: "increment" });
-        }}
-      >
-        Увеличи
-      </button>
-      <button
-        onClick={() => {
-          dispatch({ type: "decrement" });
-        }}
-      >
-        Намали
-      </button>
     </div>
   );
 }
