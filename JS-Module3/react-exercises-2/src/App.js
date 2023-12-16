@@ -150,11 +150,7 @@ function App() {
       {orderComplete.length > 0 && (
         <div className="order-confirm container">
           <h2>Успешно завършена поръчка</h2>
-          {orderComplete.map((e) => (
-            <div className="my-order">
-              <p>Номер на поръчката: {e.orderId}</p>
-            </div>
-          ))}
+          <p>Номер на поръчката: {orderComplete[0].orderId}</p>
         </div>
       )}
     </div>
