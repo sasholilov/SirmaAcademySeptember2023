@@ -50,7 +50,12 @@ function App() {
   }
 
   function handleOrder() {
-    const completeOrderArr = cartArr.map((e) => e);
+    const date = new Date();
+    const orderId = `${date.getFullYear()}${date.getDate()}${date.getUTCHours()}${date.getMinutes()}${date.getMilliseconds()}`;
+    console.log(orderId);
+    const completeOrderArr = cartArr.map((e) => {
+      return { ...e, orderId: orderId };
+    });
     setCartArr([]);
     console.log(completeOrderArr);
     setOrderComplete(completeOrderArr);
@@ -145,6 +150,11 @@ function App() {
       {orderComplete.length > 0 && (
         <div className="order-confirm container">
           <h2>Успешно завършена поръчка</h2>
+          {orderComplete.map((e) => (
+            <div className="my-order">
+              <p>Номер на поръчката: {e.orderId}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>
